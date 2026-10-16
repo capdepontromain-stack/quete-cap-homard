@@ -29,7 +29,7 @@ Les mots de passe (dans l'ordre) :
        - Archery tag : « Je crache du feu, je suis l'un des plus actifs au monde et je fais grandir
                        l'île à chaque colère. Qui suis-je ? » (réponse attendue : la Fournaise)
  11. Le point de vue         (photo solidarité en haut de la falaise, pas de mot)
- 12. La croix                0693817882 (numéro en morse)
+ 12. La croix                réponse PAILLE-EN-QUEUE (devinette dite sur TA MESSAGERIE, voir ci-dessous)
  13. Le drapeau              TOTEM
 
 Les majuscules, accents, espaces et apostrophes ne comptent pas.
@@ -70,3 +70,12 @@ DÉFIS PHOTO / VIDÉO (étapes de type "photo" dans prive/reponses.json)
   « J'ai envoyé la photo, continuer ».
   Pour ajouter un défi : copier le bloc "type": "photo" (titre, lieu, texte, consigne, media, succes)
   à l'endroit voulu dans la liste. La numérotation se refait toute seule.
+
+MESSAGERIE TÉLÉPHONIQUE (06 93 81 78 82) : texte à enregistrer avant demain
+  Le morse sous la croix donne ton numéro. L'appli ne dit jamais que c'est un numéro de téléphone.
+  Sur ta messagerie, dis par exemple :
+  « Bravo pirates, vous avez déchiffré le message. Avant les dernières consignes, une devinette péi :
+    je suis l'oiseau blanc à la longue plume, emblème de l'île, on me voit planer au-dessus des falaises
+    de Cap Homard. Qui suis-je ? Entrez votre réponse dans la feuille de route.
+    Ensuite : [tes consignes pour trouver le drapeau de La Réunion au pied du rocher]. »
+  Réponse attendue dans l'appli : PAILLE-EN-QUEUE (avec ou sans tirets, « paille an queue » accepté).
