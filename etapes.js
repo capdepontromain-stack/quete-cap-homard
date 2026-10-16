@@ -38,6 +38,8 @@ window.ETAPES = [
     "media": "image/*",
     "succes": "Défi relevé ! Votre radeau est parti vers l'animateur. Au mur d'expression vous vous rendrez.",
     "id": 2,
+    "illustration": "img/radeau-gericault.jpg",
+    "illustration_legende": "Le Radeau de la Méduse, Théodore Géricault, 1819 (musée du Louvre)",
     "empreintes": []
   },
   {
