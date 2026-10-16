@@ -116,13 +116,13 @@ window.ETAPES = [
   {
     "titre": "L'Architecte",
     "lieu": "Terrain de construction",
-    "texte": "Donnez le mot de passe au gardien. Puis désignez votre architecte : lui seul recevra les plans des mains de Titi. À cinquante mètres de là, l'équipe de construction bâtit l'ouvrage en Kapla, sans jamais voir les plans. Entre les deux, un messager fait les allers-retours et transmet les consignes : dimensions, hauteurs, formes, tout compte. L'ouvrage doit être reproduit au centimètre près. Une fois le chantier validé par Titi, un mot vous sera remis.",
+    "texte": "Donnez le mot de passe au gardien. Puis désignez votre architecte : lui seul recevra les plans des mains de Titi. À cinquante mètres de là, l'équipe de construction bâtit l'ouvrage en Kapla, sans jamais voir les plans. Entre les deux, un messager fait les allers-retours et transmet les consignes : dimensions, hauteurs, formes, tout compte. L'ouvrage doit être reproduit au centimètre près. Une fois le chantier validé, un mot de passe vous sera remis.",
     "image": null,
     "legende": null,
-    "question": "Quel mot vous a remis Titi ?",
-    "placeholder": "Mot remis par Titi",
-    "indice": "Seul Titi peut vous le donner, une fois le chantier validé. Écoutez bien votre messager.",
-    "succes": "Chantier validé ! Place à l'épreuve suivante : l'archery tag.",
+    "question": "Quel mot de passe vous a été remis à la fin de l'épreuve ?",
+    "placeholder": "Mot de passe",
+    "indice": "Seul l'animateur de l'épreuve peut vous le donner, une fois le chantier validé.",
+    "succes": "Chantier validé ! Place à l'épreuve suivante : la roue.",
     "id": 8,
     "empreintes": [
       "8b900a847aa4bed8b226ea2c1bbec4a45938bdb8858d264af7087a10cc2aee4c",
@@ -134,16 +134,35 @@ window.ETAPES = [
     ]
   },
   {
+    "titre": "La roue",
+    "lieu": "Terrain de construction",
+    "texte": "Une roue géante, un seul équipage. À l'intérieur, tous ensemble, vous devez la faire avancer et parcourir la distance imposée sans la renverser. Chacun au même rythme, chacun à l'écoute des autres : c'est l'union qui fait rouler la roue. Une fois le parcours accompli, un mot de passe vous sera remis.",
+    "image": null,
+    "legende": null,
+    "question": "Quel mot de passe vous a été remis à la fin de l'épreuve ?",
+    "placeholder": "Mot de passe",
+    "indice": "L'animateur de l'épreuve vous le donnera une fois la distance parcourue.",
+    "succes": "La roue a tourné ! Place à l'épreuve suivante : l'archery tag.",
+    "id": 9,
+    "empreintes": [
+      "7147122f80baa7e26175e3e2860ab2b123eea6d20d0d54e08e646ebcf293f95c",
+      "7147122f80baa7e26175e3e2860ab2b123eea6d20d0d54e08e646ebcf293f95c",
+      "7147122f80baa7e26175e3e2860ab2b123eea6d20d0d54e08e646ebcf293f95c",
+      "5188ae1263defbc3c1a66b9a77ef41ba2d415bd2bad142b4f48306d6297bc22a",
+      "5188ae1263defbc3c1a66b9a77ef41ba2d415bd2bad142b4f48306d6297bc22a"
+    ]
+  },
+  {
     "titre": "L'archery tag",
     "lieu": "Terrain de construction",
     "texte": "Arcs et flèches en mousse en main, votre cible s'appelle Benjam. Touchez-le, par tous les moyens loyaux. Mais attention : Benjam riposte, et tout joueur touché par ses flèches est éliminé. À vous de vous organiser pour l'atteindre avant qu'il ne vous élimine tous.",
     "image": null,
     "legende": null,
-    "question": "Quel mot vous a remis Benjam ?",
-    "placeholder": "Mot remis par Benjam",
-    "indice": "Benjam vous le donnera quand il aura été touché.",
+    "question": "Quel mot de passe vous a été remis à la fin de l'épreuve ?",
+    "placeholder": "Mot de passe",
+    "indice": "L'animateur de l'épreuve vous le donnera quand Benjam aura été touché.",
     "succes": "Benjam est touché ! Regardez la carte de plus près : une croix y est apparue. Aux alentours de la croix vous irez.",
-    "id": 9,
+    "id": 10,
     "empreintes": [
       "40f4a2fa6cb12ea2aa517fe373e8367318cf7ba5791f1b0d87ed31d194a3f152",
       "9e25c610cea9cd4384544f6b50cc6df85c6d4f8f60d7bda1f5398996050fb417",
@@ -152,7 +171,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "titre": "La croix",
     "lieu": "Lieu de la croix",
     "texte": "Sur la carte, une croix est apparue, au cœur de la falaise. Rendez-vous sur place et cherchez bien dessous : un message étrange vous attend, fait de points et de traits. À vous de le déchiffrer, il vous mènera à une voix.",
@@ -170,7 +189,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "titre": "Le drapeau",
     "lieu": "Le rocher",
     "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",
