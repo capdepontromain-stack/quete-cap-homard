@@ -95,6 +95,7 @@
     $('etape-lieu').textContent = e.lieu || '';
     $('etape-titre').textContent = e.titre;
     $('etape-texte').textContent = e.texte;
+    $('illustration-pirate').hidden = (e.illustration !== 'pirate');
     const prec = ETAPES[(etat.etape || 0) - 1];
     $('rappel').hidden = !prec;
     $('rappel').open = false;

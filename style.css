@@ -102,3 +102,5 @@ input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px 
 .animateur-boite .champ input{flex:1;min-width:0}
 .animateur-boite .champ .btn{width:auto;margin-top:0;flex:0 0 auto}
 .btn-reprendre{width:100%;margin-top:12px;font-size:.95rem}
+.illustration{display:flex;justify-content:center;margin:-4px 0 10px}
+.illustration svg{filter:drop-shadow(0 4px 6px rgba(0,0,0,.2))}
