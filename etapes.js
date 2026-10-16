@@ -78,7 +78,7 @@ window.ETAPES = [
     "indice": "Il faut réussir les quatre épreuves. Le gardien a peut-être un conseil pour vous...",
     "succes": "Papier en main vous aurez : posez le calque sur la carte au trésor. Émeraudes, diamants et mort réunis... une croix apparaît. Aux alentours de la croix vous irez.",
     "empreintes": [
-      "88d4266fd4e6338d13b845fcf289579d209c897823b9217da3e161936f031589"
+      "2f6536df5e9972c8c14248b90777d5e455c5693bbea58857656bfe4ca9126948"
     ]
   },
   {
@@ -93,7 +93,10 @@ window.ETAPES = [
     "indice": "Point, trait... Chaque groupe de signes est un chiffre. Un alphabet morse se cache peut-être dans votre coffre.",
     "succes": "Composez ce numéro : une voix vous attend. Nouvelle quête vous est donnée. Le but est proche, à vous de ne rien lâcher.",
     "empreintes": [
-      "eb143c6ca2c90cd5c29e4a1f6b6ac8887035c80264791036ad45b74d38f3d50f"
+      "437ed55f57494555ef15b49c85e6ffd40271b0f26c9999f9c68a53f979bd0ea9",
+      "88e3b08cc01ff4a9bfd1b15f2748c7786bd62210649875511cc6ed0541fc828b",
+      "e836f7e4c2e28979a61105e7751210f372c09bcaddf2a7f26b1605f83d3661be",
+      "f2761f1a1bc82ebac3a6a3015b354522a19d5d94bcb9f1c768eca621c70b31cc"
     ]
   },
   {
