@@ -11,9 +11,13 @@ def norm(s):
     return re.sub(r"[^a-z0-9]", "", s)
 
 etapes = []
-for e in src["etapes"]:
+for i, e in enumerate(src["etapes"]):
     e = dict(e)
-    e["empreintes"] = [hashlib.sha256(norm(r).encode()).hexdigest() for r in e.pop("reponses")]
+    e["id"] = i + 1  # numérotation automatique dans l'ordre du fichier
+    if e.get("type") == "photo":
+        e["empreintes"] = []
+    else:
+        e["empreintes"] = [hashlib.sha256(norm(r).encode()).hexdigest() for r in e.pop("reponses")]
     etapes.append(e)
 
 out = "// Fichier généré par generer-etapes.py : ne pas modifier à la main.\n"

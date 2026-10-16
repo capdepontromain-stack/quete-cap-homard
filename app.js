@@ -163,16 +163,79 @@
     const erreurs = (etat.erreurs && etat.erreurs[e.id]) || 0;
     $('btn-indice').hidden = !(e.indice && erreurs >= 3) || !!lectureSeule;
     $('indice').hidden = true; $('indice').textContent = e.indice || '';
-    $('form-reponse').hidden = !!lectureSeule;
+    const photo = (e.type === 'photo');
+    $('form-reponse').hidden = !!lectureSeule || photo;
+    $('bloc-photo').hidden = !!lectureSeule || !photo;
+    if (photo && !lectureSeule) preparerPhoto(e);
     $('deja-valide').hidden = !lectureSeule;
     $('deja-valide-texte').textContent = lectureSeule ? (e.succes || '') : '';
+    $('deja-valide').querySelector('.deja-valide-titre').textContent = photo ? '✓ Défi déjà relevé' : '✓ Étape déjà validée';
     montrer('ecran-etape');
-    if (!lectureSeule) setTimeout(() => $('reponse').focus(), 350);
+    if (!lectureSeule && !photo) setTimeout(() => $('reponse').focus(), 350);
+  }
+
+  // ---------- Défi photo / vidéo : prise de vue, puis partage vers WhatsApp, puis déblocage ----------
+  let fichierPhoto = null;
+  function preparerPhoto(e) {
+    fichierPhoto = null;
+    $('photo-consigne').textContent = e.consigne || '';
+    $('photo-fichier').accept = e.media || 'image/*,video/*';
+    $('photo-fichier').value = '';
+    $('photo-apercu').hidden = true; $('photo-apercu').innerHTML = '';
+    $('btn-envoyer').hidden = true;
+    $('photo-secours').hidden = true;
+    $('photo-retour').textContent = ''; $('photo-retour').className = 'retour';
+    $('btn-photo').textContent = (e.media || '').includes('video') ? '📷 Prendre la photo ou la vidéo' : '📷 Prendre la photo';
+  }
+  function texteDefi(e) {
+    return `Équipage « ${etat.equipe || '?'} » (chef : ${etat.chef || '?'}) · Défi : ${e.titre}`;
+  }
+  $('btn-photo').addEventListener('click', () => $('photo-fichier').click());
+  $('photo-fichier').addEventListener('change', () => {
+    const f = $('photo-fichier').files[0];
+    if (!f) return;
+    fichierPhoto = f;
+    const ap = $('photo-apercu'); ap.innerHTML = ''; ap.hidden = false;
+    const url = URL.createObjectURL(f);
+    if (f.type.startsWith('video/')) { const v = document.createElement('video'); v.src = url; v.controls = true; v.playsInline = true; ap.appendChild(v); }
+    else { const im = document.createElement('img'); im.src = url; im.alt = 'Votre photo'; ap.appendChild(im); }
+    $('btn-photo').textContent = '📷 Reprendre';
+    $('btn-envoyer').hidden = false;
+    $('photo-retour').textContent = '';
+  });
+  $('btn-envoyer').addEventListener('click', async () => {
+    const e = ETAPES[etat.etape || 0];
+    if (!fichierPhoto) return;
+    const donnees = { files: [fichierPhoto], text: texteDefi(e) };
+    if (navigator.share && (!navigator.canShare || navigator.canShare(donnees))) {
+      try {
+        await navigator.share(donnees);
+        validerEtape();
+        return;
+      } catch (err) {
+        if (err && err.name === 'AbortError') { $('photo-retour').textContent = 'Envoi annulé. Choisissez WhatsApp puis le contact de l\'animateur.'; $('photo-retour').className = 'retour erreur'; return; }
+      }
+    }
+    // Secours (ordinateur ou téléphone sans partage de fichiers) : lien WhatsApp + confirmation manuelle
+    const num = CONFIG.whatsapp || '';
+    $('lien-whatsapp').href = `https://wa.me/${num}?text=${encodeURIComponent(texteDefi(e) + ' (photo à joindre)')}`;
+    $('photo-secours').hidden = false;
+    $('photo-retour').textContent = 'Le partage direct n\'est pas disponible ici : ouvrez WhatsApp, envoyez la photo à l\'animateur, puis confirmez.';
+    $('photo-retour').className = 'retour erreur';
+  });
+  $('btn-photo-fait').addEventListener('click', () => { if (fichierPhoto) validerEtape(); });
+
+  function validerEtape() {
+    etat.etape = (etat.etape || 0) + 1;
+    etat.transition = true;
+    if (etat.etape >= ETAPES.length) etat.fin = Date.now();
+    sauver(); rendre();
   }
 
   function rendreSucces() {
     const e = ETAPES[(etat.etape || 1) - 1];
     $('succes-texte').textContent = e ? e.succes : '';
+    $('ecran-succes').querySelector('h2').textContent = (e && e.type === 'photo') ? 'Défi relevé' : 'Mot de passe validé';
     $('btn-suite').textContent = (etat.etape >= ETAPES.length) ? 'Voir le trésor' : 'Étape suivante';
     montrer('ecran-succes');
   }
@@ -215,11 +278,7 @@
     const retour = $('retour');
     if (ok) {
       retour.textContent = 'Mot de passe correct !'; retour.className = 'retour ok';
-      etat.etape = (etat.etape || 0) + 1;
-      etat.transition = true;
-      if (etat.etape >= ETAPES.length) etat.fin = Date.now();
-      sauver();
-      setTimeout(rendre, 600);
+      setTimeout(validerEtape, 600);
     } else {
       etat.erreurs = etat.erreurs || {};
       etat.erreurs[e.id] = (etat.erreurs[e.id] || 0) + 1;

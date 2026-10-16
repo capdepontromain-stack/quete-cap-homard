@@ -113,3 +113,9 @@ input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px 
 .deja-valide-titre{margin:0 0 6px;font-weight:600;color:var(--vert)}
 .deja-valide p{margin:0 0 10px;line-height:1.5}
 .deja-valide .btn{width:100%}
+.bloc-photo .btn{width:100%;margin-top:10px}
+.photo-consigne{margin:0 0 6px;padding:12px 14px;background:rgba(201,150,46,.14);border-left:4px solid var(--or);border-radius:8px;font-weight:600;line-height:1.5}
+.photo-apercu{margin-top:12px}
+.photo-apercu img,.photo-apercu video{display:block;width:100%;max-height:320px;object-fit:cover;border-radius:10px;border:1px solid rgba(60,45,20,.3)}
+.btn-vert{background:linear-gradient(180deg,#3f9a60,var(--vert));color:#fff;box-shadow:0 4px 14px rgba(47,122,74,.35)}
+.lien-bouton{display:block;text-align:center;text-decoration:none;box-sizing:border-box}

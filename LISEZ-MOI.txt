@@ -48,3 +48,12 @@ MISE À JOUR AUTOMATIQUE
   À chaque ouverture, la page vérifie s'il existe une nouvelle version et se recharge seule.
   Le QR code n'a JAMAIS besoin d'être refait : son adresse ne change pas.
   Pour publier une modification : ./publier.sh "ce que j'ai changé" (régénère, numérote, envoie).
+
+DÉFIS PHOTO / VIDÉO (étapes de type "photo" dans prive/reponses.json)
+  L'équipe doit prendre une photo ou vidéo, puis l'envoyer : la fenêtre de partage du téléphone
+  s'ouvre avec le fichier déjà attaché, l'équipe choisit WhatsApp puis ton contact (06 93 81 78 82).
+  Le message contient le nom de l'équipage, le chef et le nom du défi. La suite ne se débloque
+  qu'après le partage. Sur un ordinateur (pas de partage de fichiers) : lien WhatsApp + bouton
+  « J'ai envoyé la photo, continuer ».
+  Pour ajouter un défi : copier le bloc "type": "photo" (titre, lieu, texte, consigne, media, succes)
+  à l'endroit voulu dans la liste. La numérotation se refait toute seule.

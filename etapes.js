@@ -4,7 +4,8 @@ window.CONFIG = {
   "accroche": "Sur les traces du drapeau de La Réunion",
   "intro": "Cette feuille de route vous mènera peut-être au drapeau de La Réunion. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.",
   "final_titre": "Bravo pirates !",
-  "final_sous_titre": "Drapeau de La Réunion trouvé"
+  "final_sous_titre": "Drapeau de La Réunion trouvé",
+  "whatsapp": "262693817882"
 };
 window.ETAPES = [
   {
@@ -29,7 +30,18 @@ window.ETAPES = [
     ]
   },
   {
+    "type": "photo",
+    "titre": "Le cri de guerre",
+    "lieu": "En route vers le mur d'expression",
+    "texte": "Sur le chemin du mur d'expression, trouvez le panneau d'entrée de ville de Boucan Canot. Toute l'équipe devant le panneau : filmez ou photographiez votre cri de guerre !",
+    "consigne": "Photo ou vidéo de l'équipage au complet, devant le panneau, en plein cri de guerre.",
+    "media": "image/*,video/*",
+    "succes": "Défi relevé ! Votre cri de guerre est parti vers l'animateur. Au mur d'expression vous vous rendrez.",
     "id": 2,
+    "empreintes": []
+  },
+  {
+    "id": 3,
     "titre": "Le mur d'expression",
     "lieu": "Mur d'expression",
     "texte": "Au mur, une image vous montre votre prochaine destination. Au contour de ses pieds vous creuserez. Énigme vous trouverez.",
@@ -45,7 +57,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "titre": "L'anagramme",
     "lieu": "Mur d'expression",
     "texte": "Posez votre réponse sur le papier : des lettres apparaissent. Remettez-les dans l'ordre pour connaître votre prochaine destination.",
@@ -61,7 +73,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "titre": "La bouteille à la mer",
     "lieu": "Caverne",
     "texte": "Le message de la bouteille est brouillé. Un objet de votre coffre de départ vous aidera à le lire.",
@@ -76,7 +88,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "titre": "Les épreuves de cohésion",
     "lieu": "Terrain de construction",
     "texte": "Le gardien vous soumet quatre épreuves. Chaque épreuve réussie vous rapporte une lettre. Les quatre lettres débloquent la suite.",
@@ -91,7 +103,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "titre": "La croix",
     "lieu": "Lieu de la croix",
     "texte": "Arrivé sur ce lieu marqué de plusieurs croix blanches, sous l'une d'entre elles vous chercherez. Troisième roulette Énigma vous trouverez. Les 3 réunies vous donneront le ton.",
@@ -109,7 +121,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "titre": "Le drapeau",
     "lieu": "Le rocher",
     "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",
