@@ -3,7 +3,7 @@ window.CONFIG = {
   "client": "Team Père Favron",
   "accroche": "Sur les traces du drapeau de La Réunion",
   "intro": "Cette feuille de route vous mènera peut-être au drapeau de La Réunion. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.",
-  "final_titre": "Bravo pirates !",
+  "final_titre": "Bravo, aventuriers !",
   "final_sous_titre": "Drapeau de La Réunion trouvé",
   "whatsapp": "262693817882",
   "telephone_affiche": "06 93 81 78 82"
@@ -215,7 +215,7 @@ window.ETAPES = [
     "question": "Quelle est votre réponse à la devinette de la voix ?",
     "placeholder": "Votre réponse",
     "indice": "Déchiffrez d'abord le message sous la croix : points et traits, un langage de marins et de télégraphistes. Ce qu'il révèle vous mènera à la voix, et la voix à la réponse.",
-    "succes": "Paille-en-queue ! La voix vous a confié les dernières consignes : suivez-les jusqu'au drapeau de La Réunion.",
+    "succes": "Paille-en-queue ! Dernière ligne droite : les consignes pour trouver le drapeau s'affichent à l'étape suivante.",
     "empreintes": [
       "447cf4541252d57ae4442ada17a17dad479ae022f48d414631df1c04ca1b5f55",
       "447cf4541252d57ae4442ada17a17dad479ae022f48d414631df1c04ca1b5f55",
@@ -233,14 +233,14 @@ window.ETAPES = [
   {
     "id": 13,
     "titre": "Le drapeau",
-    "lieu": "Le rocher",
-    "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",
-    "image": "img/rocher.jpg",
-    "legende": "Le rocher de Cap Homard",
+    "lieu": "Dernière ligne droite",
+    "texte": "Dernière ligne droite. Positionnez-vous dans le tunnel et traversez, direction la mer. Puis, à vingt mètres en contrebas, comme trois frères entrelacés, vous verrez et rejoindrez. À vos côtés, l'indication Cap Homard est là pour vous assister. Une fois dessous, direction dix degrés nord : à quarante mètres, il annonce le danger. Prenez le chemin face à la mer, beau, long et décroché. Une trace sur lui pour vous aiguiller. Vous creuserez, et drapeau vous trouverez.",
+    "image": null,
+    "legende": null,
     "question": "Quel est le mot inscrit avec le drapeau ?",
     "placeholder": "Mot final",
-    "indice": "Vous êtes sur les traces d'un totem enfoui...",
-    "succes": "Bravo pirates, vous y êtes arrivés !",
+    "indice": "Relisez chaque phrase comme une étape : le tunnel, les trois frères, l'indication, le danger, le chemin, la trace. Une boussole se cache peut-être dans votre coffre.",
+    "succes": "Bravo, aventuriers, vous y êtes arrivés !",
     "empreintes": [
       "7b1b3e9160a43892afd2ff4626f2f0b6e8550b96bb2cd2a1b9158c799421f6ae",
       "23ef51f5beb3e208342373118f2a47cdc94d3228e181a867194ecf3aae27c414"

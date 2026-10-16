@@ -77,5 +77,7 @@ MESSAGERIE TÉLÉPHONIQUE (06 93 81 78 82) : texte à enregistrer avant demain
   « Bravo pirates, vous avez déchiffré le message. Avant les dernières consignes, une devinette péi :
     je suis l'oiseau blanc à la longue plume, emblème de l'île, on me voit planer au-dessus des falaises
     de Cap Homard. Qui suis-je ? Entrez votre réponse dans la feuille de route.
-    Ensuite : [tes consignes pour trouver le drapeau de La Réunion au pied du rocher]. »
+    Dès que la réponse est validée, les consignes pour trouver le drapeau s'affichent dans la feuille de route. »
+  (Les consignes du drapeau : tunnel, trois frères entrelacés, indication Cap Homard, dix degrés nord, danger,
+   chemin face à la mer, trace, creuser : elles sont dans l'appli à l'étape 13, inutile de les dire sur la messagerie.)
   Réponse attendue dans l'appli : PAILLE-EN-QUEUE (avec ou sans tirets, « paille an queue » accepté).
