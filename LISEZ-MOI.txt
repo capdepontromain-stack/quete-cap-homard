@@ -72,12 +72,17 @@ DÉFIS PHOTO / VIDÉO (étapes de type "photo" dans prive/reponses.json)
   à l'endroit voulu dans la liste. La numérotation se refait toute seule.
 
 MESSAGERIE TÉLÉPHONIQUE (06 93 81 78 82) : texte à enregistrer avant demain
-  Le morse sous la croix donne ton numéro. L'appli ne dit jamais que c'est un numéro de téléphone.
-  Sur ta messagerie, dis par exemple :
-  « Bravo pirates, vous avez déchiffré le message. Avant les dernières consignes, une devinette péi :
-    je suis l'oiseau blanc à la longue plume, emblème de l'île, on me voit planer au-dessus des falaises
-    de Cap Homard. Qui suis-je ? Entrez votre réponse dans la feuille de route.
-    Dès que la réponse est validée, les consignes pour trouver le drapeau s'affichent dans la feuille de route. »
-  (Les consignes du drapeau : tunnel, trois frères entrelacés, indication Cap Homard, dix degrés nord, danger,
-   chemin face à la mer, trace, creuser : elles sont dans l'appli à l'étape 13, inutile de les dire sur la messagerie.)
-  Réponse attendue dans l'appli : PAILLE-EN-QUEUE (avec ou sans tirets, « paille an queue » accepté).
+  « Bravo, aventuriers ! Vous avez déchiffré le message de la croix. Ne lâchez rien : le but est proche.
+    Pour continuer votre quête, vous devez entrer dans la feuille de route un mot que je vais vous faire deviner.
+    Écoutez bien.
+    Chez les Grecs, je suis le fils du Soleil, et les savants m'appellent encore ainsi.
+    Je niche dans les falaises de Cap Homard, et quand je prends mon envol,
+    deux longs rubans blancs traînent derrière moi.
+    Mon nom cache un brin de chaume, et une compagnie aérienne de l'île m'a choisi pour emblème.
+    Qui suis-je ?
+    Entrez votre réponse dans la feuille de route, et les dernières consignes s'afficheront.
+    Bon vent, pirates ! »
+  Réponse attendue : PAILLE-EN-QUEUE (fils du Soleil = Phaéton, son nom scientifique ; brin de chaume = paille ;
+  rubans = ses longues plumes de queue ; emblème d'Air Austral).
+  Si une équipe bloque trop longtemps, indice à donner de vive voix : « c'est un oiseau, et son nom
+  finit par la partie du corps qu'il traîne derrière lui ».
