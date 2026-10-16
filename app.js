@@ -68,8 +68,33 @@
     $('progression-texte').textContent = etat.fin ? 'Terminé' : `Étape ${Math.min(n + 1, ETAPES.length)} / ${ETAPES.length}`;
   }
 
+  // ---------- Relecture des écrans précédents (flèches en bas), sans toucher à la progression ----------
+  let vue = null; // null = écran en cours ; sinon index d'une étape déjà validée, en lecture seule
+  function cibleRetour() {
+    if (!etat.debut) return -1;
+    if (vue !== null) return vue - 1;
+    if (etat.fin) return ETAPES.length - 1;
+    return (etat.etape || 0) - 1; // écran d'étape ou de réussite : l'étape validée juste avant
+  }
+  function majFleches() {
+    $('fleche-retour').hidden = cibleRetour() < 0;
+    $('fleche-avant').hidden = (vue === null);
+  }
+  $('fleche-retour').addEventListener('click', () => {
+    const c = cibleRetour(); if (c < 0) return;
+    vue = c; rendre();
+  });
+  $('fleche-avant').addEventListener('click', () => {
+    if (vue === null) return;
+    vue = (vue + 1 >= (etat.etape || 0)) ? null : vue + 1; rendre();
+  });
+  $('btn-retour-courant').addEventListener('click', () => { vue = null; rendre(); });
+
   function rendre() {
     majProgression();
+    if (vue !== null && (!etat.debut || vue < 0 || vue >= (etat.etape || 0))) vue = null;
+    majFleches();
+    if (vue !== null) { rendreEtape(vue, true); return; }
     if (!etat.debut) { rendreAccueil(); return; }
     if (etat.fin) { rendreFinal(); return; }
     if (etat.transition) { rendreSucces(); return; }
@@ -88,16 +113,17 @@
     montrer('ecran-accueil');
   }
 
-  function rendreEtape() {
-    const e = ETAPES[etat.etape || 0];
+  function rendreEtape(index, lectureSeule) {
+    const i = (typeof index === 'number') ? index : (etat.etape || 0);
+    const e = ETAPES[i];
     if (!e) { etat.fin = Date.now(); sauver(); rendreFinal(); return; }
     $('etape-numero').textContent = `Étape ${e.id}`;
     $('etape-lieu').textContent = e.lieu || '';
     $('etape-titre').textContent = e.titre;
     $('etape-texte').textContent = e.texte;
     $('illustration-pirate').hidden = (e.illustration !== 'pirate');
-    const prec = ETAPES[(etat.etape || 0) - 1];
-    $('rappel').hidden = !prec;
+    const prec = ETAPES[i - 1];
+    $('rappel').hidden = !prec || !!lectureSeule;
     $('rappel').open = false;
     $('rappel-texte').textContent = prec ? prec.succes : '';
     const fig = $('etape-figure');
@@ -112,10 +138,13 @@
     $('reponse').value = '';
     $('retour').textContent = ''; $('retour').className = 'retour';
     const erreurs = (etat.erreurs && etat.erreurs[e.id]) || 0;
-    $('btn-indice').hidden = !(e.indice && erreurs >= 3);
+    $('btn-indice').hidden = !(e.indice && erreurs >= 3) || !!lectureSeule;
     $('indice').hidden = true; $('indice').textContent = e.indice || '';
+    $('form-reponse').hidden = !!lectureSeule;
+    $('deja-valide').hidden = !lectureSeule;
+    $('deja-valide-texte').textContent = lectureSeule ? (e.succes || '') : '';
     montrer('ecran-etape');
-    setTimeout(() => $('reponse').focus(), 350);
+    if (!lectureSeule) setTimeout(() => $('reponse').focus(), 350);
   }
 
   function rendreSucces() {
@@ -189,7 +218,7 @@
   });
 
   $('btn-suite').addEventListener('click', () => {
-    etat.transition = false; sauver(); rendre();
+    etat.transition = false; vue = null; sauver(); rendre();
   });
 
   // Visionneuse plein écran pour la carte
@@ -236,7 +265,7 @@
       b.textContent = String(e.id); b.title = e.titre;
       b.addEventListener('click', () => {
         if (!etat.debut) etat = { equipe: 'Animateur', debut: Date.now(), etape: 0, erreurs: {} };
-        etat.etape = i; etat.transition = false; delete etat.fin;
+        etat.etape = i; etat.transition = false; delete etat.fin; vue = null;
         sauver(); $('animateur').hidden = true; rendre();
       });
       cont.appendChild(b);

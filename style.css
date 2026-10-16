@@ -104,3 +104,11 @@ input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px 
 .btn-reprendre{width:100%;margin-top:12px;font-size:.95rem}
 .illustration{display:flex;justify-content:center;margin:-4px 0 10px}
 .illustration svg{filter:drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+.fleche{position:fixed;bottom:calc(12px + env(safe-area-inset-bottom));z-index:6;width:40px;height:40px;border-radius:50%;border:1px solid rgba(201,150,46,.6);background:rgba(20,17,12,.75);color:var(--or-clair);font-size:1.6rem;line-height:1;padding:0 0 4px;cursor:pointer;opacity:.75}
+.fleche:active{transform:scale(.95)}
+.fleche-gauche{left:12px}
+.fleche-droite{right:12px}
+.deja-valide{margin:0 0 6px;padding:14px;border-radius:10px;background:rgba(47,122,74,.1);border:1px solid rgba(47,122,74,.4)}
+.deja-valide-titre{margin:0 0 6px;font-weight:600;color:var(--vert)}
+.deja-valide p{margin:0 0 10px;line-height:1.5}
+.deja-valide .btn{width:100%}

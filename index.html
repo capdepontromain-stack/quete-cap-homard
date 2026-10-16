@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 <div class="fond" aria-hidden="true"></div>
@@ -84,6 +84,11 @@
         <img id="etape-image" alt="" loading="lazy">
         <figcaption id="etape-legende"></figcaption>
       </figure>
+      <div id="deja-valide" class="deja-valide" hidden>
+        <p class="deja-valide-titre">✓ Étape déjà validée</p>
+        <p id="deja-valide-texte"></p>
+        <button id="btn-retour-courant" type="button" class="btn btn-or">Revenir à l'étape en cours</button>
+      </div>
       <form id="form-reponse" class="form-reponse" autocomplete="off">
         <label id="etape-question" for="reponse"></label>
         <div class="champ">
@@ -127,6 +132,8 @@
 
 </main>
 
+<button id="fleche-retour" type="button" class="fleche fleche-gauche" aria-label="Écran précédent" hidden>‹</button>
+<button id="fleche-avant" type="button" class="fleche fleche-droite" aria-label="Écran suivant" hidden>›</button>
 <footer class="pied">
   <img id="logo-pied" src="img/logo-pullup.png" alt="" width="36" height="36" draggable="false">
   <span>Un jeu Pull Up Événements</span>
@@ -162,6 +169,6 @@
 </div>
 
 <script src="etapes.js?v=7"></script>
-<script src="app.js?v=7"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>
