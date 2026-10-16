@@ -122,23 +122,26 @@ window.ETAPES = [
     "question": "Quel mot vous a remis Benjam ?",
     "placeholder": "Mot remis par Benjam",
     "indice": "Benjam vous le donnera quand il aura été touché.",
-    "succes": "Benjam est touché ! Papier en main vous aurez : posez le calque sur la carte. Émeraudes, diamants et mort réunis... une croix apparaît. Aux alentours de la croix vous irez.",
+    "succes": "Benjam est touché ! Regardez la carte de plus près : une croix y est apparue. Aux alentours de la croix vous irez.",
     "id": 8,
     "empreintes": [
-      "7147122f80baa7e26175e3e2860ab2b123eea6d20d0d54e08e646ebcf293f95c"
+      "40f4a2fa6cb12ea2aa517fe373e8367318cf7ba5791f1b0d87ed31d194a3f152",
+      "9e25c610cea9cd4384544f6b50cc6df85c6d4f8f60d7bda1f5398996050fb417",
+      "ae2b15ff50702904cf74553b9e09c3033322cb44be687fa9eaa0a2e26cfc015b",
+      "6a4d5abe72980d03247ed6748893eaae533e3b7d22a52fe05632813ec6be45f9"
     ]
   },
   {
     "id": 9,
     "titre": "La croix",
     "lieu": "Lieu de la croix",
-    "texte": "Arrivé sur ce lieu marqué de plusieurs croix blanches, sous l'une d'entre elles vous chercherez. Troisième roulette Énigma vous trouverez. Les 3 réunies vous donneront le ton.",
-    "image": null,
-    "legende": null,
-    "question": "Quel numéro le message en morse vous donne-t-il ?",
-    "placeholder": "Numéro (chiffres)",
-    "indice": "Point, trait... Chaque groupe de signes est un chiffre. Un alphabet morse se cache peut-être dans votre coffre.",
-    "succes": "Composez ce numéro : une voix vous attend. Nouvelle quête vous est donnée. Le but est proche, à vous de ne rien lâcher.",
+    "texte": "Sur la carte, une croix est apparue, au cœur de la falaise. Rendez-vous sur place et cherchez bien dessous : un message étrange vous attend, fait de points et de traits. À vous de le déchiffrer, il vous mènera à une voix.",
+    "image": "img/carte-croix.jpg",
+    "legende": "Une croix est apparue sur la carte (touchez pour agrandir)",
+    "question": "Quel numéro de téléphone se cache dans le message ?",
+    "placeholder": "Numéro (10 chiffres)",
+    "indice": "Points et traits : les marins et les télégraphistes connaissent ce langage depuis longtemps. Chaque groupe de signes est un chiffre.",
+    "succes": "Composez ce numéro : une voix vous attend sur la messagerie. Nouvelle quête vous est donnée. Le but est proche, à vous de ne rien lâcher.",
     "empreintes": [
       "437ed55f57494555ef15b49c85e6ffd40271b0f26c9999f9c68a53f979bd0ea9",
       "88e3b08cc01ff4a9bfd1b15f2748c7786bd62210649875511cc6ed0541fc828b",
