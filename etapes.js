@@ -116,12 +116,12 @@ window.ETAPES = [
   {
     "titre": "L'Architecte",
     "lieu": "Terrain de construction",
-    "texte": "Donnez le mot de passe au gardien. Puis désignez votre architecte : lui seul recevra les plans des mains du Quartier-maître. À cinquante mètres de là, l'équipe de construction bâtit l'ouvrage en Kapla, sans jamais voir les plans. Entre les deux, un messager fait les allers-retours et transmet les consignes : dimensions, hauteurs, formes, tout compte. L'ouvrage doit être reproduit au centimètre près. Une fois le chantier validé, l'animateur vous soufflera une énigme péi : sa réponse ouvre la suite.",
+    "texte": "Donnez le mot de passe au gardien. Puis désignez votre architecte : lui seul recevra les indications de construction de l'animateur. À cinquante mètres de là, l'équipe de construction bâtit l'ouvrage en Kapla, sans jamais entendre ces indications. Entre les deux, un messager fait les allers-retours et transmet les consignes : dimensions, hauteurs, formes, tout compte. L'ouvrage doit être reproduit au centimètre près. Une fois le chantier validé, l'animateur vous soufflera une énigme péi : sa réponse ouvre la suite.",
     "image": null,
     "legende": null,
-    "question": "Le Quartier-maître vous a soufflé une énigme péi. Quelle est votre réponse ?",
+    "question": "L'animateur vous a soufflé une énigme péi. Quelle est votre réponse ?",
     "placeholder": "Votre réponse",
-    "indice": "Seul le Quartier-maître peut vous souffler l'énigme, une fois le chantier validé.",
+    "indice": "L'énigme ne se trouve pas ici : demandez à l'animateur de la répéter, une fois le chantier validé.",
     "succes": "Letchi ! Chantier validé et énigme résolue. Place à l'épreuve suivante : la roue.",
     "id": 8,
     "empreintes": [
