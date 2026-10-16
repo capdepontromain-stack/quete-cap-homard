@@ -1,5 +1,5 @@
-const CACHE = 'quete-cap-homard-v8';
-const FICHIERS = ['./', 'index.html', 'style.css?v=8', 'app.js?v=8', 'etapes.js?v=7', 'img/rocher.jpg', 'img/carte.jpg', 'img/logo-pullup.png', 'manifest.json'];
+const CACHE = 'quete-cap-homard-v9';
+const FICHIERS = ['./', 'index.html', 'style.css?v=9', 'app.js?v=9', 'etapes.js?v=9', 'img/rocher.jpg', 'img/carte.jpg', 'img/logo-pullup.png', 'manifest.json'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FICHIERS)).then(() => self.skipWaiting()));
 });
@@ -8,6 +8,7 @@ self.addEventListener('activate', (e) => {
 });
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
+  if (e.request.url.includes('version.json')) return; // toujours le réseau, jamais le cache
   e.respondWith(
     fetch(e.request).then((r) => {
       const copie = r.clone();

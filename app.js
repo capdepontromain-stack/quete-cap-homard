@@ -2,6 +2,22 @@
 (function () {
   'use strict';
   const $ = (id) => document.getElementById(id);
+  const URL_INITIALE = location.href;
+  const PARAMS = new URLSearchParams(location.search);
+
+  // ---------- Mise à jour automatique : si une nouvelle version est publiée, la page se recharge ----------
+  (async () => {
+    try {
+      const r = await fetch('version.json?t=' + Date.now(), { cache: 'no-store' });
+      const { v } = await r.json();
+      const locale = (document.querySelector('meta[name="version"]') || {}).content;
+      const u = new URL(URL_INITIALE);
+      if (String(v) !== String(locale) && u.searchParams.get('maj') !== String(v)) {
+        u.searchParams.set('maj', v);
+        location.replace(u.toString());
+      }
+    } catch (e) { /* hors ligne : on garde la version en cache */ }
+  })();
   const ETAPES = window.ETAPES || [];
   const CONFIG = window.CONFIG || {};
   // Personnalisation (nom du client, objectif) depuis prive/reponses.json
@@ -23,13 +39,14 @@
   // Lien du QR code = ?reset=1 : on repart de l'accueil. Une partie en cours (non terminée)
   // est mise de côté et proposée en « Reprendre » sur l'accueil, pour ne pas la perdre.
   const SAUVEGARDE = 'quete-cap-homard-sauvegarde';
-  if (new URLSearchParams(location.search).has('reset')) {
+  if (PARAMS.has('reset')) {
     try {
       if (etat.debut && !etat.fin) localStorage.setItem(SAUVEGARDE, JSON.stringify(etat));
       else localStorage.removeItem(SAUVEGARDE);
     } catch (e) {}
-    etat = {}; sauver(); history.replaceState(null, '', location.pathname);
+    etat = {}; sauver();
   }
+  if (location.search) history.replaceState(null, '', location.pathname);
 
   // ---------- Normalisation des réponses : majuscules, accents, espaces, apostrophes ignorés ----------
   function normaliser(s) {
@@ -243,7 +260,7 @@
   ['touchstart', 'mousedown'].forEach((ev) => logo.addEventListener(ev, debutAppui, { passive: true }));
   ['touchend', 'touchcancel', 'touchmove', 'mouseup', 'mouseleave'].forEach((ev) => logo.addEventListener(ev, finAppui));
   logo.addEventListener('contextmenu', (ev) => ev.preventDefault());
-  if (new URLSearchParams(location.search).has('animateur')) ouvrirAnimateur();
+  if (PARAMS.has('animateur')) ouvrirAnimateur();
 
   function ouvrirAnimateur() {
     $('animateur').hidden = false;

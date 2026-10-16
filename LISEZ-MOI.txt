@@ -43,3 +43,8 @@ PERSONNALISATION PAR CLIENT
 FLÈCHES EN BAS DE PAGE (pour tout le monde)
   ‹ en bas à gauche : relire l'écran précédent (étape déjà validée, en lecture seule, rien ne change).
   › en bas à droite : revenir vers l'étape en cours. Bouton « Revenir à l'étape en cours » aussi dans la carte.
+
+MISE À JOUR AUTOMATIQUE
+  À chaque ouverture, la page vérifie s'il existe une nouvelle version et se recharge seule.
+  Le QR code n'a JAMAIS besoin d'être refait : son adresse ne change pas.
+  Pour publier une modification : ./publier.sh "ce que j'ai changé" (régénère, numérote, envoie).
