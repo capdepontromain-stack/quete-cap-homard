@@ -136,7 +136,7 @@ window.ETAPES = [
   {
     "titre": "La roue",
     "lieu": "Terrain de construction",
-    "texte": "Une roue géante, un seul équipage. À l'intérieur, tous ensemble, vous devez la faire avancer et parcourir la distance imposée sans la renverser. Chacun au même rythme, chacun à l'écoute des autres : c'est l'union qui fait rouler la roue. Une fois le parcours accompli, un mot de passe vous sera remis.",
+    "texte": "Devant vous, une grande bâche multicolore refermée sur elle-même : la roue. Tout l'équipage se glisse à l'intérieur, debout, et c'est en marchant tous ensemble, à l'unisson, que la roue avance. Un seul qui va trop vite ou trop lentement, et tout le monde s'emmêle. Parcourez la distance imposée sans sortir de la roue : une fois le parcours accompli, un mot de passe vous sera remis.",
     "image": null,
     "legende": null,
     "question": "Quel mot de passe vous a été remis à la fin de l'épreuve ?",
