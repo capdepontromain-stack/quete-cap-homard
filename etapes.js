@@ -125,7 +125,12 @@ window.ETAPES = [
     "succes": "Chantier validé ! Place à l'épreuve suivante : l'archery tag.",
     "id": 8,
     "empreintes": [
-      "2f6536df5e9972c8c14248b90777d5e455c5693bbea58857656bfe4ca9126948"
+      "8b900a847aa4bed8b226ea2c1bbec4a45938bdb8858d264af7087a10cc2aee4c",
+      "8b900a847aa4bed8b226ea2c1bbec4a45938bdb8858d264af7087a10cc2aee4c",
+      "f9ed2b54fd72ac1652579d3726fe310b3984465599a6051909ac4259de8f7aac",
+      "f9ed2b54fd72ac1652579d3726fe310b3984465599a6051909ac4259de8f7aac",
+      "8f6c685f1fb2704cabde70d979c94fbe4dfdf7fcbf6782c2424895b800296103",
+      "8f6c685f1fb2704cabde70d979c94fbe4dfdf7fcbf6782c2424895b800296103"
     ]
   },
   {
