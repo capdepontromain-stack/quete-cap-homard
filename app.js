@@ -143,7 +143,7 @@
     const ill = $('illustration');
     if (e.illustration) {
       ill.hidden = false;
-      ill.classList.toggle('large', e.type === 'photo');
+      ill.classList.toggle('large', e.type === 'photo' || !!e.illustration_grande);
       $('illustration-img').src = e.illustration;
       $('illustration-img').alt = e.illustration_legende || '';
       $('illustration-legende').textContent = e.illustration_legende || '';
