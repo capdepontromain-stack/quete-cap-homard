@@ -7,14 +7,14 @@
 <meta name="description" content="Chasse au trésor immersive à Cap Homard, un jeu Pull Up Événements.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#14110c">
-<meta name="version" content="10">
+<meta name="version" content="11">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="img/logo-pullup.png">
 <link rel="apple-touch-icon" href="img/logo-pullup.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 <div class="fond" aria-hidden="true"></div>
@@ -63,22 +63,10 @@
     <div class="parchemin">
       <p class="etape-numero"><span id="etape-numero"></span> <span class="sep">·</span> <span id="etape-lieu"></span></p>
       <h2 id="etape-titre"></h2>
-      <div id="illustration-pirate" class="illustration" hidden aria-hidden="true">
-        <svg viewBox="0 0 120 120" width="96" height="96">
-          <!-- petit pirate original, clin d'œil au street art réunionnais -->
-          <ellipse cx="60" cy="112" rx="30" ry="5" fill="rgba(0,0,0,.15)"/>
-          <path d="M34 60 q26 -40 52 0 q6 30 -26 50 q-32 -20 -26 -50z" fill="#e6b94a" stroke="#14110c" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M33 56 q27 -30 54 0 l4 8 q-31 -12 -62 0z" fill="#a33a2a" stroke="#14110c" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M87 60 q14 -6 10 10 q-8 -4 -10 -10z" fill="#a33a2a" stroke="#14110c" stroke-width="3" stroke-linejoin="round"/>
-          <circle cx="70" cy="75" r="4" fill="#14110c"/>
-          <path d="M40 66 l20 8" stroke="#14110c" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="49" cy="76" r="7" fill="#14110c"/>
-          <path d="M50 90 q10 6 20 0" fill="none" stroke="#14110c" stroke-width="3" stroke-linecap="round"/>
-          <path d="M30 80 q-14 6 -8 18" fill="none" stroke="#14110c" stroke-width="3" stroke-linecap="round"/>
-          <path d="M90 80 q14 6 8 18" fill="none" stroke="#14110c" stroke-width="3" stroke-linecap="round"/>
-          <path d="M98 98 l-6 -8 m6 8 l-8 4" fill="none" stroke="#14110c" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-      </div>
+      <figure id="illustration" class="illustration" hidden>
+        <img id="illustration-img" alt="" loading="lazy">
+        <figcaption id="illustration-legende"></figcaption>
+      </figure>
       <details id="rappel" class="rappel" hidden><summary>Relire le message précédent</summary><p id="rappel-texte"></p></details>
       <p id="etape-texte" class="etape-texte"></p>
       <figure id="etape-figure" class="etape-figure" hidden>
@@ -169,7 +157,7 @@
   <img id="visionneuse-image" alt="">
 </div>
 
-<script src="etapes.js?v=10"></script>
-<script src="app.js?v=10"></script>
+<script src="etapes.js?v=11"></script>
+<script src="app.js?v=11"></script>
 </body>
 </html>

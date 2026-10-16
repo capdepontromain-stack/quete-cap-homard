@@ -138,7 +138,13 @@
     $('etape-lieu').textContent = e.lieu || '';
     $('etape-titre').textContent = e.titre;
     $('etape-texte').textContent = e.texte;
-    $('illustration-pirate').hidden = (e.illustration !== 'pirate');
+    const ill = $('illustration');
+    if (e.illustration) {
+      ill.hidden = false;
+      $('illustration-img').src = e.illustration;
+      $('illustration-img').alt = e.illustration_legende || '';
+      $('illustration-legende').textContent = e.illustration_legende || '';
+    } else { ill.hidden = true; }
     const prec = ETAPES[i - 1];
     $('rappel').hidden = !prec || !!lectureSeule;
     $('rappel').open = false;

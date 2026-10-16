@@ -18,7 +18,8 @@ window.ETAPES = [
     "placeholder": "Nom du lieu",
     "indice": "Cherchez le mur signé Belly 2024, juste à côté du terrain de construction. Les mots en haut de la carte sont des colonnes, les lettres à droite sont des lignes.",
     "succes": "Bien vu, pirates ! Au mur d'expression vous vous rendrez. Nouveau lieu repéré, vous y regarderez de plus près : prochaine destination vous trouverez.",
-    "illustration": "pirate",
+    "illustration": "img/gouzou-jace.jpg",
+    "illustration_legende": "Un Gouzou pirate, œuvre de Jace",
     "empreintes": [
       "d4d2f3248708da2a01db5df8ce6f52a8ae82dd169fdaa02fedb0b94457217bf2",
       "c8e5dba99f9b46cb28d7515061559b4e874d56a266a43a3c24fa45c6ad36d9fe",
