@@ -195,8 +195,8 @@ window.ETAPES = [
   {
     "type": "photo",
     "titre": "Le point de vue",
-    "lieu": "Haut de la falaise",
-    "texte": "Montez jusqu'à la croix. Là-haut, le point de vue sur Cap Homard et la mer d'émeraudes est incroyable : prenez le temps d'en profiter. Puis une photo d'équipe, façon solidarité : un équipage soudé, qui va droit au but et qui ne lâche rien.",
+    "lieu": "La croix",
+    "texte": "Rejoignez la croix. Le point de vue sur Cap Homard et la mer d'émeraudes est incroyable : prenez le temps d'en profiter. Puis une photo d'équipe, façon solidarité : un équipage soudé, qui va droit au but et qui ne lâche rien.",
     "image": "img/carte-croix.jpg",
     "legende": "La croix sur la falaise (touchez pour agrandir)",
     "consigne": "Photo de l'équipage au complet, le point de vue en arrière-plan, en mode solidarité : soudés, droit au but, on ne lâche rien.",
