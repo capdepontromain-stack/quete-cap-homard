@@ -1,6 +1,6 @@
 // Fichier généré par generer-etapes.py : ne pas modifier à la main.
 window.CONFIG = {
-  "client": "Team Perfavron",
+  "client": "Team Père Favron",
   "accroche": "Sur les traces du drapeau de La Réunion",
   "intro": "Cette feuille de route vous mènera peut-être au drapeau de La Réunion. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.",
   "final_titre": "Bravo pirates !",

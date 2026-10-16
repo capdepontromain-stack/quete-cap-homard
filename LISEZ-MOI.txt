@@ -41,7 +41,7 @@ ACCÈS ANIMATEUR (pour toi, invisible pour les équipes)
 PERSONNALISATION PAR CLIENT
   Dans prive/reponses.json, bloc "config" : nom du client affiché en haut (client),
   phrase sous le titre (accroche), texte d'intro (intro), titres de l'écran final.
-  Puis : python3 generer-etapes.py et publication. Demain = Team Perfavron, objectif = drapeau de La Réunion.
+  Puis : python3 generer-etapes.py et publication. Demain = Team Père Favron, objectif = drapeau de La Réunion.
 
 FLÈCHES EN BAS DE PAGE (pour tout le monde)
   ‹ en bas à gauche : relire l'écran précédent (étape déjà validée, en lecture seule, rien ne change).
