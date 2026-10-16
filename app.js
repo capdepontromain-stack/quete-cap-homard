@@ -69,6 +69,10 @@
     $('etape-lieu').textContent = e.lieu || '';
     $('etape-titre').textContent = e.titre;
     $('etape-texte').textContent = e.texte;
+    const prec = ETAPES[(etat.etape || 0) - 1];
+    $('rappel').hidden = !prec;
+    $('rappel').open = false;
+    $('rappel-texte').textContent = prec ? prec.succes : '';
     const fig = $('etape-figure');
     if (e.image) {
       fig.hidden = false;
@@ -169,6 +173,61 @@
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
+
+  // ---------- Accès animateur : appui long (2 s) sur le logo en bas de page, puis code ----------
+  const CODE_ANIMATEUR = 'cbcd1dde3d8b0ecc2618fc107743a4c258265f29e6d44287606d0c2a69869b8f'; // empreinte du code
+  let appui = null;
+  const logo = $('logo-pied');
+  const debutAppui = () => { clearTimeout(appui); appui = setTimeout(ouvrirAnimateur, 2000); };
+  const finAppui = () => clearTimeout(appui);
+  ['touchstart', 'mousedown'].forEach((ev) => logo.addEventListener(ev, debutAppui, { passive: true }));
+  ['touchend', 'touchcancel', 'touchmove', 'mouseup', 'mouseleave'].forEach((ev) => logo.addEventListener(ev, finAppui));
+  logo.addEventListener('contextmenu', (ev) => ev.preventDefault());
+  if (new URLSearchParams(location.search).has('animateur')) ouvrirAnimateur();
+
+  function ouvrirAnimateur() {
+    $('animateur').hidden = false;
+    $('animateur-menu').hidden = true;
+    $('form-animateur').hidden = false;
+    $('code-animateur').value = '';
+    $('animateur-retour').textContent = '';
+    setTimeout(() => $('code-animateur').focus(), 200);
+  }
+  function menuAnimateur() {
+    $('form-animateur').hidden = true;
+    $('animateur-menu').hidden = false;
+    $('animateur-equipe').textContent = etat.equipe || '(aucune équipe en cours)';
+    const cont = $('animateur-etapes');
+    cont.innerHTML = '';
+    ETAPES.forEach((e, i) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'btn btn-or' + (i === (etat.etape || 0) && !etat.fin ? ' actuelle' : '');
+      b.textContent = String(e.id); b.title = e.titre;
+      b.addEventListener('click', () => {
+        if (!etat.debut) etat = { equipe: 'Animateur', debut: Date.now(), etape: 0, erreurs: {} };
+        etat.etape = i; etat.transition = false; delete etat.fin;
+        sauver(); $('animateur').hidden = true; rendre();
+      });
+      cont.appendChild(b);
+    });
+  }
+  $('form-animateur').addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    let ok = false;
+    try { ok = (await empreinte(normaliser($('code-animateur').value))) === CODE_ANIMATEUR; } catch (e) { ok = false; }
+    if (ok) menuAnimateur();
+    else { $('animateur-retour').textContent = 'Code incorrect.'; $('animateur-retour').className = 'retour erreur'; }
+  });
+  $('animateur-final').addEventListener('click', () => {
+    if (!etat.debut) etat = { equipe: 'Animateur', debut: Date.now(), etape: 0, erreurs: {} };
+    etat.etape = ETAPES.length; etat.fin = etat.fin || Date.now(); etat.transition = false;
+    sauver(); $('animateur').hidden = true; rendre();
+  });
+  $('animateur-reset').addEventListener('click', () => {
+    if (!confirm('Effacer la partie en cours et revenir à l\'accueil ?')) return;
+    etat = {}; sauver(); $('animateur').hidden = true; rendre();
+  });
+  $('animateur-fermer').addEventListener('click', () => { $('animateur').hidden = true; });
 
   rendre();
 })();

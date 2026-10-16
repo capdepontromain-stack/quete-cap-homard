@@ -75,7 +75,22 @@ input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px 
 .final-image{width:100%;border-radius:10px;margin-top:6px;border:1px solid rgba(60,45,20,.3)}
 
 .pied{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));color:var(--creme);font-size:.8rem;letter-spacing:.06em;background:linear-gradient(0deg,rgba(20,17,12,.9),transparent);pointer-events:none}
-.pied img{border-radius:50%;background:#000}
+.pied img{border-radius:50%;background:#000;pointer-events:auto;-webkit-touch-callout:none;user-select:none;-webkit-user-select:none;cursor:default}
+.rappel{margin:0 0 14px;font-size:.92rem}
+.rappel summary{cursor:pointer;color:var(--or);font-weight:600;list-style:none}
+.rappel summary::before{content:"▸ ";}
+.rappel[open] summary::before{content:"▾ ";}
+.rappel p{margin:8px 0 0;padding:10px 12px;background:rgba(201,150,46,.12);border-left:3px solid var(--or);border-radius:6px;line-height:1.5;color:var(--gris)}
+.animateur{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:16px}
+.animateur-boite{background:var(--creme);border-radius:14px;padding:22px;width:100%;max-width:420px;box-shadow:var(--ombre);max-height:90vh;overflow:auto}
+.animateur-boite h2{font-size:1.6rem;margin-bottom:12px}
+.animateur-boite .btn{width:100%;margin-top:10px}
+.animateur-boite input[type=password]{width:100%;font:inherit;font-size:1.1rem;padding:12px 14px;border:2px solid rgba(60,45,20,.35);border-radius:10px;background:#fffaf0}
+.animateur-info,.animateur-label{margin:10px 0 6px;font-size:.95rem}
+.animateur-etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.animateur-etapes .btn{margin:0;padding:12px 0;font-size:1.05rem}
+.animateur-etapes .btn.actuelle{outline:3px solid var(--noir)}
+.btn-rouge{background:var(--rouge);color:#fff}
 
 .visionneuse{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto;touch-action:pinch-zoom}
 .visionneuse[hidden]{display:none}
@@ -83,3 +98,6 @@ input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px 
 .visionneuse-fermer{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.3rem;cursor:pointer}
 
 @media (min-width:700px){h1{font-size:3rem}.parchemin{padding:34px 36px 30px}}
+.animateur-boite .champ{display:flex;gap:8px}
+.animateur-boite .champ input{flex:1;min-width:0}
+.animateur-boite .champ .btn{width:auto;margin-top:0;flex:0 0 auto}

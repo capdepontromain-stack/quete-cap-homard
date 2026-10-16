@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="fond" aria-hidden="true"></div>
@@ -59,6 +59,7 @@
     <div class="parchemin">
       <p class="etape-numero"><span id="etape-numero"></span> <span class="sep">·</span> <span id="etape-lieu"></span></p>
       <h2 id="etape-titre"></h2>
+      <details id="rappel" class="rappel" hidden><summary>Relire le message précédent</summary><p id="rappel-texte"></p></details>
       <p id="etape-texte" class="etape-texte"></p>
       <figure id="etape-figure" class="etape-figure" hidden>
         <img id="etape-image" alt="" loading="lazy">
@@ -108,9 +109,32 @@
 </main>
 
 <footer class="pied">
-  <img src="img/logo-pullup.png" alt="" width="36" height="36">
+  <img id="logo-pied" src="img/logo-pullup.png" alt="" width="36" height="36" draggable="false">
   <span>Un jeu Pull Up Événements</span>
 </footer>
+
+<!-- Panneau animateur (appui long sur le logo, code requis) -->
+<div id="animateur" class="animateur" hidden>
+  <div class="animateur-boite">
+    <h2>Accès animateur</h2>
+    <form id="form-animateur" class="form-animateur" autocomplete="off">
+      <label for="code-animateur">Code animateur</label>
+      <div class="champ">
+        <input id="code-animateur" type="password" inputmode="text" placeholder="Code">
+        <button type="submit" class="btn btn-or">Entrer</button>
+      </div>
+      <p id="animateur-retour" class="retour"></p>
+    </form>
+    <div id="animateur-menu" hidden>
+      <p class="animateur-info">Équipage : <strong id="animateur-equipe"></strong></p>
+      <p class="animateur-label">Aller directement à une étape :</p>
+      <div id="animateur-etapes" class="animateur-etapes"></div>
+      <button id="animateur-final" type="button" class="btn btn-ligne">Voir l'écran final</button>
+      <button id="animateur-reset" type="button" class="btn btn-rouge">Recommencer (nouvelle équipe)</button>
+    </div>
+    <button id="animateur-fermer" type="button" class="btn btn-ligne">Fermer</button>
+  </div>
+</div>
 
 <!-- Visionneuse d'image plein écran -->
 <div id="visionneuse" class="visionneuse" hidden>
@@ -118,7 +142,7 @@
   <img id="visionneuse-image" alt="">
 </div>
 
-<script src="etapes.js?v=2"></script>
-<script src="app.js?v=1"></script>
+<script src="etapes.js?v=3"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

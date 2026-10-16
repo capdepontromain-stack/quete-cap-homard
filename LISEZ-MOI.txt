@@ -24,3 +24,10 @@ Pour changer un mot de passe ou un texte :
   2. Modifier, enregistrer.
   3. Demander à Claude : « mets à jour la quête Cap Homard »
      (ou lancer : python3 generer-etapes.py puis git add -A && git commit -m "maj" && git push).
+
+ACCÈS ANIMATEUR (pour toi, invisible pour les équipes)
+  Appuie 2 secondes sur le petit logo Pull Up en bas de la page, puis tape le code : PULLUP
+  (ou ouvre le lien avec ?animateur=1 à la fin).
+  Tu peux alors : aller directement à n'importe quelle étape, voir l'écran final,
+  ou recommencer pour une nouvelle équipe.
+  Les équipes, elles, ont seulement un lien replié « Relire le message précédent » à chaque étape.
