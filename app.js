@@ -13,7 +13,14 @@
   function sauver() {
     try { localStorage.setItem(CLE, JSON.stringify(etat)); } catch (e) { /* mode privé : on continue sans sauvegarde */ }
   }
+  // Lien du QR code = ?reset=1 : on repart de l'accueil. Une partie en cours (non terminée)
+  // est mise de côté et proposée en « Reprendre » sur l'accueil, pour ne pas la perdre.
+  const SAUVEGARDE = 'quete-cap-homard-sauvegarde';
   if (new URLSearchParams(location.search).has('reset')) {
+    try {
+      if (etat.debut && !etat.fin) localStorage.setItem(SAUVEGARDE, JSON.stringify(etat));
+      else localStorage.removeItem(SAUVEGARDE);
+    } catch (e) {}
     etat = {}; sauver(); history.replaceState(null, '', location.pathname);
   }
 
@@ -56,10 +63,22 @@
 
   function rendre() {
     majProgression();
-    if (!etat.debut) { montrer('ecran-accueil'); return; }
+    if (!etat.debut) { rendreAccueil(); return; }
     if (etat.fin) { rendreFinal(); return; }
     if (etat.transition) { rendreSucces(); return; }
     rendreEtape();
+  }
+
+  function rendreAccueil() {
+    let sauv = null;
+    try { sauv = JSON.parse(localStorage.getItem(SAUVEGARDE)); } catch (e) {}
+    const btn = $('btn-reprendre');
+    if (sauv && sauv.debut && !sauv.fin) {
+      btn.hidden = false;
+      btn.textContent = `Reprendre la partie de « ${sauv.equipe} » (étape ${(sauv.etape || 0) + 1})`;
+      btn.onclick = () => { etat = sauv; sauver(); try { localStorage.removeItem(SAUVEGARDE); } catch (e) {} rendre(); };
+    } else { btn.hidden = true; }
+    montrer('ecran-accueil');
   }
 
   function rendreEtape() {
@@ -110,6 +129,7 @@
     const nom = $('nom-equipe').value.trim();
     if (!nom) return;
     etat = { equipe: nom, debut: Date.now(), etape: 0, erreurs: {} };
+    try { localStorage.removeItem(SAUVEGARDE); } catch (e) {}
     sauver(); rendre();
   });
 

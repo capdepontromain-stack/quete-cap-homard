@@ -1,7 +1,10 @@
 LA QUÊTE DU CAP HOMARD : mode d'emploi
 ======================================
 
-Adresse du jeu (à envoyer aux équipes ou à mettre en QR code) :
+Adresse du QR code (repart toujours de l'accueil) :
+https://capdepontromain-stack.github.io/quete-cap-homard/?reset=1
+
+Adresse simple (reprend là où le téléphone en était) :
 https://capdepontromain-stack.github.io/quete-cap-homard/
 
 Pour recommencer une partie sur un téléphone (remettre à zéro) :
