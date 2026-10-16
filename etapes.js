@@ -76,19 +76,30 @@ window.ETAPES = [
     "id": 5,
     "titre": "La bouteille à la mer",
     "lieu": "Caverne",
-    "texte": "Le message de la bouteille est brouillé. Un objet de votre coffre de départ vous aidera à le lire.",
+    "texte": "Dans la caverne, comme jetées à la mer, des bouteilles vous attendent. Le code d'honneur des pirates est clair : une seule bouteille par équipage, les autres restent pour ceux qui suivent. Son message est brouillé : un objet de votre coffre de départ vous aidera à le lire.",
     "image": null,
     "legende": null,
     "question": "Quel est le mot de passe à donner au gardien du lieu ?",
     "placeholder": "Mot de passe",
     "indice": "Regardez le message dans le miroir.",
-    "succes": "Mot de passe validé ! Sur le terrain de construction vous retournerez et au gardien vous le direz. De cohésion vous ferez preuve : quatre épreuves, quatre lettres.",
+    "succes": "Mot de passe validé ! Avant de quitter la caverne, un dernier défi vous attend.",
     "empreintes": [
       "47664cd5888be94f0e70ed10f7f833c9c857bdb11158faff2efc67dfecc6a228"
     ]
   },
   {
+    "type": "photo",
+    "titre": "Le cri de guerre",
+    "lieu": "Caverne",
+    "texte": "Toujours dans la caverne, bouteille à la main, l'équipage au complet pousse son cri de guerre. Que les falaises de Cap Homard s'en souviennent !",
+    "consigne": "Vidéo courte (10 secondes maximum) de l'équipage, bouteille à la main, en plein cri de guerre.",
+    "media": "video/*",
+    "succes": "Défi relevé ! Votre cri de guerre est parti vers l'animateur. Sur le terrain de construction vous retournerez et « Architecte » au gardien vous direz. De cohésion vous ferez preuve : quatre épreuves, quatre lettres.",
     "id": 6,
+    "empreintes": []
+  },
+  {
+    "id": 7,
     "titre": "Les épreuves de cohésion",
     "lieu": "Terrain de construction",
     "texte": "Le gardien vous soumet quatre épreuves. Chaque épreuve réussie vous rapporte une lettre. Les quatre lettres débloquent la suite.",
@@ -103,7 +114,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "titre": "La croix",
     "lieu": "Lieu de la croix",
     "texte": "Arrivé sur ce lieu marqué de plusieurs croix blanches, sous l'une d'entre elles vous chercherez. Troisième roulette Énigma vous trouverez. Les 3 réunies vous donneront le ton.",
@@ -121,7 +132,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "titre": "Le drapeau",
     "lieu": "Le rocher",
     "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",
