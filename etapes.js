@@ -76,12 +76,12 @@ window.ETAPES = [
     "id": 5,
     "titre": "La bouteille à la mer",
     "lieu": "Caverne",
-    "texte": "Dans la caverne, comme jetées à la mer, des bouteilles vous attendent. Le code d'honneur des pirates est clair : une seule bouteille par équipage, les autres restent pour ceux qui suivent. Son message est brouillé : un objet de votre coffre de départ vous aidera à le lire.",
+    "texte": "Dans la caverne, comme jetées à la mer, des bouteilles vous attendent. Le code d'honneur des pirates est clair : une seule bouteille par équipage, les autres restent pour ceux qui suivent. Son message semble illisible... L'ustensile remis au départ n'est pas là par hasard.",
     "image": null,
     "legende": null,
     "question": "Quel est le mot de passe à donner au gardien du lieu ?",
     "placeholder": "Mot de passe",
-    "indice": "Regardez le message dans le miroir.",
+    "indice": "Le message est écrit à l'envers. Regardez bien ce que contient votre coffre de départ.",
     "succes": "Mot de passe validé ! Avant de quitter la caverne, un dernier défi vous attend.",
     "empreintes": [
       "47664cd5888be94f0e70ed10f7f833c9c857bdb11158faff2efc67dfecc6a228"
@@ -94,27 +94,42 @@ window.ETAPES = [
     "texte": "Toujours dans la caverne, bouteille à la main, l'équipage au complet pousse son cri de guerre. Que les falaises de Cap Homard s'en souviennent !",
     "consigne": "Vidéo courte (10 secondes maximum) de l'équipage, bouteille à la main, en plein cri de guerre.",
     "media": "video/*",
-    "succes": "Défi relevé ! Votre cri de guerre est parti vers l'animateur. Sur le terrain de construction vous retournerez et « Architecte » au gardien vous direz. De cohésion vous ferez preuve : quatre épreuves, quatre lettres.",
+    "succes": "Défi relevé ! Votre cri de guerre est parti vers l'animateur. Sur le terrain de construction vous retournerez et « Architecte » au gardien vous direz.",
     "id": 6,
     "empreintes": []
   },
   {
-    "id": 7,
-    "titre": "Les épreuves de cohésion",
+    "titre": "L'Architecte",
     "lieu": "Terrain de construction",
-    "texte": "Le gardien vous soumet quatre épreuves. Chaque épreuve réussie vous rapporte une lettre. Les quatre lettres débloquent la suite.",
+    "texte": "Donnez le mot de passe au gardien. Puis désignez votre architecte : lui seul recevra les plans des mains de Titi. À cinquante mètres de là, l'équipe de construction bâtit l'ouvrage en Kapla, sans jamais voir les plans. Entre les deux, un messager fait les allers-retours et transmet les consignes : dimensions, hauteurs, formes, tout compte. L'ouvrage doit être reproduit au centimètre près. Une fois le chantier validé par Titi, un mot vous sera remis.",
     "image": null,
     "legende": null,
-    "question": "Entrez les 4 lettres gagnées aux épreuves.",
-    "placeholder": "4 lettres",
-    "indice": "Il faut réussir les quatre épreuves. Le gardien a peut-être un conseil pour vous...",
-    "succes": "Papier en main vous aurez : posez le calque sur la carte. Émeraudes, diamants et mort réunis... une croix apparaît. Aux alentours de la croix vous irez.",
+    "question": "Quel mot vous a remis Titi ?",
+    "placeholder": "Mot remis par Titi",
+    "indice": "Seul Titi peut vous le donner, une fois le chantier validé. Écoutez bien votre messager.",
+    "succes": "Chantier validé ! Place à l'épreuve suivante : l'archery tag.",
+    "id": 7,
     "empreintes": [
       "2f6536df5e9972c8c14248b90777d5e455c5693bbea58857656bfe4ca9126948"
     ]
   },
   {
+    "titre": "L'archery tag",
+    "lieu": "Terrain de construction",
+    "texte": "Arcs et flèches en mousse en main, votre cible s'appelle Benjam. Touchez-le, par tous les moyens loyaux. Mais attention : Benjam riposte, et tout joueur touché par ses flèches est éliminé. À vous de vous organiser pour l'atteindre avant qu'il ne vous élimine tous.",
+    "image": null,
+    "legende": null,
+    "question": "Quel mot vous a remis Benjam ?",
+    "placeholder": "Mot remis par Benjam",
+    "indice": "Benjam vous le donnera quand il aura été touché.",
+    "succes": "Benjam est touché ! Papier en main vous aurez : posez le calque sur la carte. Émeraudes, diamants et mort réunis... une croix apparaît. Aux alentours de la croix vous irez.",
     "id": 8,
+    "empreintes": [
+      "7147122f80baa7e26175e3e2860ab2b123eea6d20d0d54e08e646ebcf293f95c"
+    ]
+  },
+  {
+    "id": 9,
     "titre": "La croix",
     "lieu": "Lieu de la croix",
     "texte": "Arrivé sur ce lieu marqué de plusieurs croix blanches, sous l'une d'entre elles vous chercherez. Troisième roulette Énigma vous trouverez. Les 3 réunies vous donneront le ton.",
@@ -132,7 +147,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "titre": "Le drapeau",
     "lieu": "Le rocher",
     "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",
