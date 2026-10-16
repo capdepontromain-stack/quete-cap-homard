@@ -72,9 +72,11 @@
   }, 1000);
 
   // ---------- Affichage ----------
-  const ecrans = ['ecran-accueil', 'ecran-etape', 'ecran-succes', 'ecran-final'];
+  const ecrans = ['ecran-splash', 'ecran-accueil', 'ecran-etape', 'ecran-succes', 'ecran-final'];
+  let splashVu = false; // écran de bienvenue vu dans cette ouverture de la page
   function montrer(id) {
     ecrans.forEach((e) => { $(e).hidden = (e !== id); });
+    document.body.classList.toggle('splash-actif', id === 'ecran-splash');
     window.scrollTo(0, 0);
   }
   function majProgression() {
@@ -112,7 +114,7 @@
     if (vue !== null && (!etat.debut || vue < 0 || vue >= (etat.etape || 0))) vue = null;
     majFleches();
     if (vue !== null) { rendreEtape(vue, true); return; }
-    if (!etat.debut) { rendreAccueil(); return; }
+    if (!etat.debut) { if (!splashVu) { montrer('ecran-splash'); return; } rendreAccueil(); return; }
     if (etat.fin) { rendreFinal(); return; }
     if (etat.transition) { rendreSucces(); return; }
     rendreEtape();
@@ -255,6 +257,8 @@
   }
 
   // ---------- Événements ----------
+  $('btn-splash').addEventListener('click', () => { splashVu = true; rendre(); });
+
   $('form-equipe').addEventListener('submit', (ev) => {
     ev.preventDefault();
     const nom = $('nom-equipe').value.trim();
