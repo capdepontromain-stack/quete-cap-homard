@@ -18,10 +18,16 @@ Les mots de passe (dans l'ordre) :
   5. L'anagramme             CAVERNE
   6. La bouteille à la mer   ARCHITECTE
   7. Le cri de guerre        (vidéo, pas de mot)
-  8. L'Architecte (Kapla)    énigme péi → LETCHI (litchi, lychee... acceptés)
-  9. La roue                 énigme péi → MAFATE
- 10. L'archery tag           énigme péi → FOURNAISE (volcan, piton de la Fournaise acceptés)
-     (les animateurs n'ont plus de mot à donner : ils valident l'épreuve, l'équipe répond à l'énigme)
+  8. L'Architecte (Kapla)    réponse LETCHI (litchi, lychee, lechi... acceptés)
+  9. La roue                 réponse MAFATE (mafatte, mafat acceptés)
+ 10. L'archery tag           réponse FOURNAISE ou PITON DE LA FOURNAISE (fautes acceptées ; « volcan » REFUSÉ)
+     ⚠️ Les énigmes ne sont PAS affichées dans l'appli. L'ANIMATEUR les dit à l'oral une fois l'épreuve réussie :
+       - Architecte : « Fruit rouge de décembre, il colore les arbres et fait le bonheur des fêtes.
+                       C'est le bonbon de La Réunion. Comment l'appelle-t-on ici ? »
+       - Roue :       « Ce cirque n'a aucune route. On n'y entre qu'à pied ou en hélicoptère,
+                       et ses habitants vivent dans des îlets. Quel est ce cirque ? »
+       - Archery tag : « Je crache du feu, je suis l'un des plus actifs au monde et je fais grandir
+                       l'île à chaque colère. Qui suis-je ? » (réponse attendue : la Fournaise)
  11. La croix                0693817882 (numéro en morse)
  12. Le drapeau              TOTEM
 

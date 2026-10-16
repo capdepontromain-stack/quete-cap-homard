@@ -116,12 +116,12 @@ window.ETAPES = [
   {
     "titre": "L'Architecte",
     "lieu": "Terrain de construction",
-    "texte": "Donnez le mot de passe au gardien. Puis désignez votre architecte : lui seul recevra les plans des mains de Titi. À cinquante mètres de là, l'équipe de construction bâtit l'ouvrage en Kapla, sans jamais voir les plans. Entre les deux, un messager fait les allers-retours et transmet les consignes : dimensions, hauteurs, formes, tout compte. L'ouvrage doit être reproduit au centimètre près. Une fois le chantier validé par l'animateur, une énigme péi vous ouvrira la suite.",
+    "texte": "Donnez le mot de passe au gardien. Puis désignez votre architecte : lui seul recevra les plans des mains de Titi. À cinquante mètres de là, l'équipe de construction bâtit l'ouvrage en Kapla, sans jamais voir les plans. Entre les deux, un messager fait les allers-retours et transmet les consignes : dimensions, hauteurs, formes, tout compte. L'ouvrage doit être reproduit au centimètre près. Une fois le chantier validé, l'animateur vous soufflera une énigme péi : sa réponse ouvre la suite.",
     "image": null,
     "legende": null,
-    "question": "Énigme péi : fruit rouge de décembre, il colore les arbres et fait le bonheur des fêtes. C'est le bonbon de La Réunion. Comment l'appelle-t-on ici ?",
+    "question": "L'animateur vous a soufflé une énigme péi. Quelle est votre réponse ?",
     "placeholder": "Votre réponse",
-    "indice": "Il pousse en grappes, sa peau est rouge et rugueuse, sa chair blanche et sucrée. On le vend au bord des routes en décembre.",
+    "indice": "L'énigme ne se trouve pas ici : demandez à l'animateur de la répéter.",
     "succes": "Letchi ! Chantier validé et énigme résolue. Place à l'épreuve suivante : la roue.",
     "id": 8,
     "empreintes": [
@@ -134,6 +134,10 @@ window.ETAPES = [
       "174b28e803721afe6b5240900440574bf88d7302927130996d66ceef3046bd3c",
       "9012f83780be707b9fbd1e978cb14e2740e440f455cca3302bf30c2e503311ca",
       "720e132aba3146f0e73a710955d196b3193d53788742145616e6846d859b4ea2",
+      "c11ea3cfb3f3859cacc8b3c6fb4e591f25a496aaf37d5fff472d5ea6fa5ff8f6",
+      "cf2c94797be3f8365891a3b37b33d736f55bb592bec30aa131665f35d329d213",
+      "02c3c73d96691962e589ad0373471d53ed61b676347ee1b5baf9a76c3c3853fa",
+      "255c77b53b03b7c581919da3f484380f49a771e463f31ffe523a3fbaa5e20a8e",
       "e1f5419cb11c809979e1483b30ff47a40fc12a76b28790bf451ef13900157eaa",
       "db110d6218077085d9c09813184ee1291ce90087a61bbaa5f472f83c0d3f0f9c"
     ]
@@ -141,12 +145,12 @@ window.ETAPES = [
   {
     "titre": "La roue",
     "lieu": "Terrain de construction",
-    "texte": "Devant vous, une grande bâche multicolore refermée sur elle-même : la roue. Tout l'équipage se glisse à l'intérieur, debout, et c'est en marchant tous ensemble, à l'unisson, que la roue avance. Un seul qui va trop vite ou trop lentement, et tout le monde s'emmêle. Parcourez la distance imposée sans sortir de la roue : une fois le parcours accompli et validé par l'animateur, une énigme péi vous ouvrira la suite.",
+    "texte": "Devant vous, une grande bâche multicolore refermée sur elle-même : la roue. Tout l'équipage se glisse à l'intérieur, debout, et c'est en marchant tous ensemble, à l'unisson, que la roue avance. Un seul qui va trop vite ou trop lentement, et tout le monde s'emmêle. Parcourez la distance imposée sans sortir de la roue : une fois le parcours accompli, l'animateur vous soufflera une énigme péi : sa réponse ouvre la suite.",
     "image": null,
     "legende": null,
-    "question": "Énigme péi : ce cirque n'a aucune route. On n'y entre qu'à pied ou en hélicoptère, et ses habitants vivent dans des îlets. Quel est ce cirque ?",
+    "question": "L'animateur vous a soufflé une énigme péi. Quelle est votre réponse ?",
     "placeholder": "Votre réponse",
-    "indice": "Les trois cirques de La Réunion : Cilaos, Salazie et... celui où le facteur fait sa tournée à pied.",
+    "indice": "L'énigme ne se trouve pas ici : demandez à l'animateur de la répéter.",
     "succes": "Mafate ! Comme ses habitants, vous avez avancé à pied et tous ensemble. Place à l'épreuve suivante : l'archery tag.",
     "id": 9,
     "empreintes": [
@@ -154,18 +158,20 @@ window.ETAPES = [
       "2dd1bd5f4d26d1e069fe911c63fd004c478532f21886f1f04b0978e2109aa0ca",
       "8e42abf6b74aa2f9f41db6996b61d1f29893e4708c7679aff8f2b4f0c9586935",
       "79ea61588eaad08ce560c492943fd5c67f97bd8fce16a481bd47fc8462b08be9",
-      "232dfd27e73d9c4b09f1dbc66e896634651c801c1f6bc584313e1bc5d5de5278"
+      "232dfd27e73d9c4b09f1dbc66e896634651c801c1f6bc584313e1bc5d5de5278",
+      "baeaa148919079b80ad8767b75321999893e639d302f9854f57be4b96dce3cf2",
+      "99895a27a707e262cf5afdf197e4b9350710539f43267c79d4acc3df7804c6e1"
     ]
   },
   {
     "titre": "L'archery tag",
     "lieu": "Terrain de construction",
-    "texte": "Arcs et flèches en mousse en main, votre cible s'appelle Benjam. Touchez-le, par tous les moyens loyaux. Mais attention : Benjam riposte, et tout joueur touché par ses flèches est éliminé. À vous de vous organiser pour l'atteindre avant qu'il ne vous élimine tous. Benjam touché et épreuve validée par l'animateur, une dernière énigme péi vous ouvrira la suite.",
+    "texte": "Arcs et flèches en mousse en main, votre cible s'appelle Benjam. Touchez-le, par tous les moyens loyaux. Mais attention : Benjam riposte, et tout joueur touché par ses flèches est éliminé. À vous de vous organiser pour l'atteindre avant qu'il ne vous élimine tous. Benjam touché, l'animateur vous soufflera une dernière énigme péi : sa réponse ouvre la suite.",
     "image": null,
     "legende": null,
-    "question": "Énigme péi : je crache du feu, je suis l'un des plus actifs au monde et je fais grandir l'île à chaque colère. Qui suis-je ?",
+    "question": "L'animateur vous a soufflé une énigme péi. Quelle est votre réponse ?",
     "placeholder": "Votre réponse",
-    "indice": "On le visite depuis le Pas de Bellecombe, et ses coulées de lave descendent parfois jusqu'à la route du Grand Brûlé.",
+    "indice": "L'énigme ne se trouve pas ici : demandez à l'animateur de la répéter.",
     "succes": "Le piton de la Fournaise ! Benjam est touché et l'énigme résolue. Regardez la carte de plus près : une croix y est apparue. Aux alentours de la croix vous irez.",
     "id": 10,
     "empreintes": [
@@ -173,10 +179,17 @@ window.ETAPES = [
       "e3aa8803a3ff5290f8866242a01e840cb67f56e703f0c26bc90fcc170e5cf841",
       "e8f96a04b59423a92897300804d1ce9bf4223642d297d2ba1aa634b90eaf806c",
       "fdbac3321b5fd3cc279cad814d800aae10d63cbe75ef2d64887b6cf51b43c800",
-      "bac29880699070dfa00cf7eb99035a5388714b5268b0dae4721763e15a54eef6",
-      "ca78d1741af5afe2935dda4140f12eda1910ceafea18f107b9099c996ceb90db",
-      "954956a8b82184b618ad125609c1e21641893efe453288234dc902971e4eb27f",
-      "32b9de09eae9e467590c32e5628c9f564beed5a0c028f84f5bceccf01ba3ea81"
+      "34ef74a6ac34877319eafbcf62ada0dffec573a9dbbba13cde014cb03de34930",
+      "e5d8b40d672b2687993c5fdd99a2253d1eb7541893062dd8fca529248b5136f5",
+      "7ad20010a7e5d5bccb4f20ec71d27627763984f87730949523c72120805c717b",
+      "334d3c252404c73746ffbeb0291823672c61d732fc98846cd2ac63b4f2203be7",
+      "033e037486526974a37e568ca343d326ce9ccb1c629cf77aaf38902f016e33cb",
+      "7ad20010a7e5d5bccb4f20ec71d27627763984f87730949523c72120805c717b",
+      "e5d8b40d672b2687993c5fdd99a2253d1eb7541893062dd8fca529248b5136f5",
+      "d60e1d8d8f0f39c848718f21b3f043afb58c68ebd2aa46f0972c39e23c665f02",
+      "9bd14194ad3e70b53a48d9df59e2b511d28168acb03652ee5396808059ae8a58",
+      "c271fc81a67023d4c40931c5e73a49297ff37725cd8857e244e6a2eaa5d9f017",
+      "d957c50d342ebf009d3538d085d2f057b6113309f7df63f733cff8a3481bb75d"
     ]
   },
   {
