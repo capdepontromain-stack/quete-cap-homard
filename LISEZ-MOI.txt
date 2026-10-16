@@ -34,3 +34,8 @@ ACCÈS ANIMATEUR (pour toi, invisible pour les équipes)
   Tu peux alors : aller directement à n'importe quelle étape, voir l'écran final,
   ou recommencer pour une nouvelle équipe.
   Les équipes, elles, ont seulement un lien replié « Relire le message précédent » à chaque étape.
+
+PERSONNALISATION PAR CLIENT
+  Dans prive/reponses.json, bloc "config" : nom du client affiché en haut (client),
+  phrase sous le titre (accroche), texte d'intro (intro), titres de l'écran final.
+  Puis : python3 generer-etapes.py et publication. Demain = Team Perfavron, objectif = drapeau de La Réunion.

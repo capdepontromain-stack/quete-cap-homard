@@ -17,6 +17,7 @@ for e in src["etapes"]:
     etapes.append(e)
 
 out = "// Fichier généré par generer-etapes.py : ne pas modifier à la main.\n"
+out += "window.CONFIG = " + json.dumps(src.get("config", {}), ensure_ascii=False, indent=2) + ";\n"
 out += "window.ETAPES = " + json.dumps(etapes, ensure_ascii=False, indent=2) + ";\n"
 (ici / "etapes.js").write_text(out, encoding="utf-8")
 print(f"etapes.js généré : {len(etapes)} étapes.")

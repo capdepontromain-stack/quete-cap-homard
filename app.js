@@ -1,9 +1,16 @@
 /* La Quête du Cap Homard : logique du jeu (sans serveur, tout se passe dans le téléphone). */
 (function () {
   'use strict';
-  const ETAPES = window.ETAPES || [];
-  const CLE = 'quete-cap-homard-v1';
   const $ = (id) => document.getElementById(id);
+  const ETAPES = window.ETAPES || [];
+  const CONFIG = window.CONFIG || {};
+  // Personnalisation (nom du client, objectif) depuis prive/reponses.json
+  if (CONFIG.client) { $('marque').textContent = CONFIG.client; document.title = `La Quête du Cap Homard · ${CONFIG.client}`; }
+  if (CONFIG.accroche) $('accroche').textContent = CONFIG.accroche;
+  if (CONFIG.intro) $('intro').textContent = CONFIG.intro;
+  if (CONFIG.final_titre) $('final-titre').textContent = CONFIG.final_titre;
+  if (CONFIG.final_sous_titre) $('final-sous-titre').textContent = CONFIG.final_sous_titre;
+  const CLE = 'quete-cap-homard-v1';
 
   // ---------- État sauvegardé (survit à un rechargement de la page) ----------
   let etat = charger();
@@ -119,6 +126,8 @@
 
   function rendreFinal() {
     $('final-equipe').textContent = etat.equipe || '';
+    $('final-chef').textContent = etat.chef || '';
+    $('final-chef-bloc').hidden = !etat.chef;
     $('final-temps').textContent = formatDuree((etat.fin || Date.now()) - etat.debut);
     montrer('ecran-final');
   }
@@ -127,8 +136,9 @@
   $('form-equipe').addEventListener('submit', (ev) => {
     ev.preventDefault();
     const nom = $('nom-equipe').value.trim();
-    if (!nom) return;
-    etat = { equipe: nom, debut: Date.now(), etape: 0, erreurs: {} };
+    const chef = $('nom-chef').value.trim();
+    if (!nom || !chef) return;
+    etat = { equipe: nom, chef: chef, debut: Date.now(), etape: 0, erreurs: {} };
     try { localStorage.removeItem(SAUVEGARDE); } catch (e) {}
     sauver(); rendre();
   });

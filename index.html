@@ -21,7 +21,7 @@
 
 <header class="entete">
   <div class="entete-ligne">
-    <span class="marque">Pull Up Événements</span>
+    <span class="marque" id="marque">Pull Up Événements</span>
     <span id="chrono" class="chrono" hidden>00:00</span>
   </div>
   <div id="progression" class="progression" hidden>
@@ -40,15 +40,17 @@
       </div>
       <p class="sur-titre">Escape game outdoor</p>
       <h1>La Quête du Cap Homard</h1>
-      <p class="accroche">Sur les traces d'un totem enfoui</p>
+      <p class="accroche" id="accroche">Sur les traces d'un totem enfoui</p>
       <div class="regles">
-        <p>Cette feuille de route vous mènera peut-être au trésor. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.</p>
+        <p id="intro">Cette feuille de route vous mènera peut-être au trésor. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.</p>
         <p>Proche est l'adversaire, discrétion opère. Le code d'honneur des chercheurs de trésors est toujours prospère.</p>
         <p>À chaque étape, un mot de passe trouvé sur le terrain débloque la suite.</p>
       </div>
       <form id="form-equipe" class="form-equipe" autocomplete="off">
         <label for="nom-equipe">Nom de votre équipage</label>
         <input id="nom-equipe" type="text" maxlength="30" placeholder="Ex. : Les Corsaires" required>
+        <label for="nom-chef">Nom du chef d'équipe</label>
+        <input id="nom-chef" type="text" maxlength="40" placeholder="Prénom et nom" required autocomplete="off">
         <button type="submit" class="btn btn-or">Commencer la quête</button>
       </form>
       <button id="btn-reprendre" type="button" class="btn btn-ligne btn-reprendre" hidden></button>
@@ -94,9 +96,9 @@
   <!-- Écran final -->
   <section id="ecran-final" class="ecran" hidden>
     <div class="parchemin final">
-      <p class="sur-titre">Quête accomplie</p>
-      <h1>Bravo pirates !</h1>
-      <p class="final-equipe">Équipage <strong id="final-equipe"></strong></p>
+      <p class="sur-titre" id="final-sous-titre">Quête accomplie</p>
+      <h1 id="final-titre">Bravo pirates !</h1>
+      <p class="final-equipe">Équipage <strong id="final-equipe"></strong><span id="final-chef-bloc">, mené par <strong id="final-chef"></strong></span></p>
       <p class="final-temps">Temps de quête : <strong id="final-temps"></strong></p>
       <div class="regles">
         <p>Cris de joie retentiront, mais toujours en discrétion. Respect éternel pour vous, vos adversaires auront.</p>
@@ -143,7 +145,7 @@
   <img id="visionneuse-image" alt="">
 </div>
 
-<script src="etapes.js?v=3"></script>
-<script src="app.js?v=4"></script>
+<script src="etapes.js?v=5"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

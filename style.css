@@ -38,7 +38,7 @@ h2{font-size:1.9rem;color:var(--noir)}
 label{display:block;font-weight:600;margin-bottom:8px;font-size:1rem}
 input[type=text]{width:100%;font:inherit;font-size:1.1rem;padding:12px 14px;border:2px solid rgba(60,45,20,.35);border-radius:10px;background:#fffaf0;color:var(--noir);text-transform:uppercase;letter-spacing:.06em}
 input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px rgba(201,150,46,.25)}
-#nom-equipe{text-transform:none;letter-spacing:0;margin-bottom:14px}
+#nom-equipe,#nom-chef{text-transform:none;letter-spacing:0;margin-bottom:14px}
 .btn{font:inherit;font-weight:600;border:0;border-radius:10px;padding:13px 20px;cursor:pointer;transition:transform .08s,filter .2s}
 .btn:active{transform:scale(.98)}
 .btn-or{background:linear-gradient(180deg,var(--or-clair),var(--or));color:var(--noir);box-shadow:0 4px 14px rgba(201,150,46,.35)}

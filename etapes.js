@@ -1,12 +1,19 @@
 // Fichier généré par generer-etapes.py : ne pas modifier à la main.
+window.CONFIG = {
+  "client": "Team Perfavron",
+  "accroche": "Sur les traces du drapeau de La Réunion",
+  "intro": "Cette feuille de route vous mènera peut-être au drapeau de La Réunion. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.",
+  "final_titre": "Bravo pirates !",
+  "final_sous_titre": "Drapeau de La Réunion trouvé"
+};
 window.ETAPES = [
   {
     "id": 1,
     "titre": "Les signaux du mur",
     "lieu": "Terrain de construction",
-    "texte": "Pour débuter, sur la carte au trésor vous devez vous repérer. Au mur voisin, trois signaux vous attendent. Croisez-les sur la carte : à la croisée vous chercherez.",
+    "texte": "Pour débuter, sur la carte vous devez vous repérer. Au mur voisin, trois signaux vous attendent. Croisez-les sur la carte : à la croisée vous chercherez.",
     "image": "img/carte.jpg",
-    "legende": "La carte au trésor de Cap Homard (touchez pour agrandir)",
+    "legende": "La carte de Cap Homard (touchez pour agrandir)",
     "question": "Quel lieu désignent les signaux ?",
     "placeholder": "Nom du lieu",
     "indice": "Les mots en haut de la carte sont des colonnes, les lettres à droite sont des lignes. Un roi, un A, un nuage en forme de F...",
@@ -76,7 +83,7 @@ window.ETAPES = [
     "question": "Entrez les 4 lettres gagnées aux épreuves.",
     "placeholder": "4 lettres",
     "indice": "Il faut réussir les quatre épreuves. Le gardien a peut-être un conseil pour vous...",
-    "succes": "Papier en main vous aurez : posez le calque sur la carte au trésor. Émeraudes, diamants et mort réunis... une croix apparaît. Aux alentours de la croix vous irez.",
+    "succes": "Papier en main vous aurez : posez le calque sur la carte. Émeraudes, diamants et mort réunis... une croix apparaît. Aux alentours de la croix vous irez.",
     "empreintes": [
       "2f6536df5e9972c8c14248b90777d5e455c5693bbea58857656bfe4ca9126948"
     ]
@@ -101,13 +108,13 @@ window.ETAPES = [
   },
   {
     "id": 7,
-    "titre": "Le trésor",
+    "titre": "Le drapeau",
     "lieu": "Le rocher",
-    "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le trésor vous attend.",
+    "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",
     "image": "img/rocher.jpg",
     "legende": "Le rocher de Cap Homard",
-    "question": "Quel est le mot inscrit sur le ticket du trésor ?",
-    "placeholder": "Mot du trésor",
+    "question": "Quel est le mot inscrit avec le drapeau ?",
+    "placeholder": "Mot final",
     "indice": "Vous êtes sur les traces d'un totem enfoui...",
     "succes": "Bravo pirates, vous y êtes arrivés !",
     "empreintes": [
