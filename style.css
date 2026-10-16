@@ -128,3 +128,10 @@ body.splash-actif .entete{background:none}
 .splash{min-height:calc(100vh - 150px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding:20px 0}
 .splash-texte{margin:0;font-family:'Pirata One',serif;font-size:1.7rem;line-height:1.25;color:var(--creme);text-shadow:0 2px 12px rgba(0,0,0,.8),0 0 30px rgba(0,0,0,.6);letter-spacing:.02em}
 .splash .btn{font-size:1.1rem;padding:15px 30px;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.btn-plus-tard{font-weight:400;font-style:italic;border-style:dashed;opacity:.9}
+.plus-tard-avert{margin:12px 0 0;padding:10px 12px;border-radius:8px;background:rgba(163,58,42,.12);border-left:4px solid var(--rouge);color:var(--rouge);font-weight:600;line-height:1.45}
+.plus-tard-note{margin:6px 0 0;font-size:.82rem;color:var(--gris);font-style:italic;text-align:center}
+.final-reportes{text-align:left;margin:0 0 16px;padding:12px 14px;border-radius:10px;background:rgba(163,58,42,.1);border:1px solid rgba(163,58,42,.4)}
+.final-reportes-titre{margin:0 0 6px;font-weight:600;color:var(--rouge)}
+.final-reportes ul{margin:0 0 10px;padding-left:20px}
+.final-reportes .btn{width:100%}

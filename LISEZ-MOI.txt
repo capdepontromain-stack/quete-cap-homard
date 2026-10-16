@@ -82,3 +82,9 @@ MESSAGERIE TÉLÉPHONIQUE (06 93 81 78 82) : texte à enregistrer avant demain (
   brin de chaume = paille ; traînée blanche = ses longues plumes de queue).
   Indice de secours à donner de vive voix : « c'est un oiseau, et son nom finit par la partie du corps
   qu'il traîne derrière lui ».
+
+OPTION « PLUS TARD » SUR LES DÉFIS PHOTO / VIDÉO
+  Sauf au premier défi (celui du contact), un bouton permet de passer sans envoyer :
+  « Nous enverrons ce chef-d'œuvre plus tard », puis « On garde ce chef-d'œuvre pour plus tard, promis »,
+  puis « J'enverrai plus tard, c'est noté » avec un avertissement rouge dès le 3e report.
+  L'écran final liste les chefs-d'œuvre en attente avec un bouton WhatsApp pour te les envoyer.

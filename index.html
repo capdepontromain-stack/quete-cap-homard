@@ -7,14 +7,14 @@
 <meta name="description" content="Chasse au trésor immersive à Cap Homard, un jeu Pull Up Événements.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#14110c">
-<meta name="version" content="29">
+<meta name="version" content="30">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="img/logo-pullup.png">
 <link rel="apple-touch-icon" href="img/logo-pullup.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=29">
+<link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
 <div class="fond" aria-hidden="true"></div>
@@ -98,6 +98,11 @@
         <div id="photo-apercu" class="photo-apercu" hidden></div>
         <button id="btn-envoyer" type="button" class="btn btn-vert" hidden>Envoyer à l'animateur sur WhatsApp</button>
         <p id="photo-retour" class="retour" aria-live="polite"></p>
+        <div id="bloc-plus-tard" hidden>
+          <p id="plus-tard-avert" class="plus-tard-avert" hidden></p>
+          <button id="btn-plus-tard" type="button" class="btn btn-ligne btn-plus-tard"></button>
+          <p class="plus-tard-note">Prenez quand même la photo ou la vidéo avec votre appareil : vous l'enverrez à l'animateur plus tard.</p>
+        </div>
         <div id="photo-secours" hidden>
           <a id="lien-whatsapp" class="btn btn-ligne lien-bouton" target="_blank" rel="noopener">Ouvrir WhatsApp</a>
           <button id="btn-photo-fait" type="button" class="btn btn-ligne">J'ai envoyé la photo, continuer</button>
@@ -139,6 +144,11 @@
         <p>Cris de joie retentiront, mais toujours en discrétion. Respect éternel pour vous, vos adversaires auront.</p>
         <p>Ticket vous prendrez. Coffre à sa place vous laisserez pour les équipes d'affilée.</p>
         <p>Bravo pirates, vous y êtes arrivés : avec fierté vous marcherez.</p>
+      </div>
+      <div id="final-reportes" class="final-reportes" hidden>
+        <p class="final-reportes-titre">Il vous reste des chefs-d'œuvre à envoyer à l'animateur :</p>
+        <ul id="final-reportes-liste"></ul>
+        <a id="final-whatsapp" class="btn btn-vert lien-bouton" target="_blank" rel="noopener">Ouvrir WhatsApp pour les envoyer</a>
       </div>
       <img src="img/rocher.jpg" alt="Le rocher de Cap Homard" class="final-image">
     </div>
@@ -182,7 +192,7 @@
   <img id="visionneuse-image" alt="">
 </div>
 
-<script src="etapes.js?v=29"></script>
-<script src="app.js?v=29"></script>
+<script src="etapes.js?v=30"></script>
+<script src="app.js?v=30"></script>
 </body>
 </html>

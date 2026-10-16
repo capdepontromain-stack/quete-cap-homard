@@ -194,6 +194,13 @@
     $('photo-secours').hidden = true;
     $('photo-retour').textContent = ''; $('photo-retour').className = 'retour';
     $('btn-photo').textContent = (e.media || '').includes('video') ? '📷 Prendre la photo ou la vidéo' : '📷 Prendre la photo';
+    // Option « plus tard » : jamais sur le premier défi (celui du contact), formulation qui change, rappel dès le 3e report
+    const n = (etat.reportes || []).length;
+    const libelles = ['Nous enverrons ce chef-d\'œuvre plus tard', 'On garde ce chef-d\'œuvre pour plus tard, promis', 'J\'enverrai plus tard, c\'est noté'];
+    $('bloc-plus-tard').hidden = !!e.contact;
+    $('btn-plus-tard').textContent = libelles[Math.min(n, libelles.length - 1)];
+    $('plus-tard-avert').hidden = n < 2;
+    $('plus-tard-avert').textContent = `Attention : vous avez déjà ${n} chef${n > 1 ? 's' : ''}-d'œuvre en attente. Toutes les photos et vidéos vous seront demandées à la fin de la quête : autant les envoyer tout de suite !`;
   }
   function texteDefi(e) {
     return `Équipage « ${etat.equipe || '?'} » (chef : ${etat.chef || '?'}) · Défi : ${e.titre}`;
@@ -232,8 +239,15 @@
     $('photo-retour').className = 'retour erreur';
   });
   $('btn-photo-fait').addEventListener('click', () => { if (fichierPhoto) validerEtape(); });
+  $('btn-plus-tard').addEventListener('click', () => {
+    const e = ETAPES[etat.etape || 0];
+    etat.reportes = etat.reportes || [];
+    etat.reportes.push(e.titre);
+    validerEtape(true);
+  });
 
-  function validerEtape() {
+  function validerEtape(reporte) {
+    etat.dernierReporte = !!reporte;
     etat.etape = (etat.etape || 0) + 1;
     etat.transition = true;
     if (etat.etape >= ETAPES.length) etat.fin = Date.now();
@@ -242,8 +256,9 @@
 
   function rendreSucces() {
     const e = ETAPES[(etat.etape || 1) - 1];
-    $('succes-texte').textContent = e ? e.succes : '';
-    $('ecran-succes').querySelector('h2').textContent = (e && e.type === 'photo') ? 'Défi relevé' : 'Mot de passe validé';
+    const reporte = !!etat.dernierReporte;
+    $('succes-texte').textContent = e ? (reporte ? `Défi reporté : pensez à envoyer votre chef-d'œuvre à l'animateur plus tard. ${e.succes.replace(/^Défi relevé ![^.]*\.\s*/, '').replace(/^Magnifique ![^.]*\.\s*/, '')}` : e.succes) : '';
+    $('ecran-succes').querySelector('h2').textContent = reporte ? 'Défi reporté' : ((e && e.type === 'photo') ? 'Défi relevé' : 'Mot de passe validé');
     $('btn-suite').textContent = (etat.etape >= ETAPES.length) ? 'Voir le trésor' : 'Étape suivante';
     montrer('ecran-succes');
   }
@@ -252,6 +267,10 @@
     $('final-equipe').textContent = etat.equipe || '';
     $('final-chef').textContent = etat.chef || '';
     $('final-chef-bloc').hidden = !etat.chef;
+    const rep = etat.reportes || [];
+    $('final-reportes').hidden = rep.length === 0;
+    $('final-reportes-liste').innerHTML = rep.map((t) => `<li>${t}</li>`).join('');
+    $('final-whatsapp').href = `https://wa.me/${CONFIG.whatsapp || ''}?text=${encodeURIComponent(`Équipage « ${etat.equipe || '?'} » : voici nos chefs-d'œuvre en retard (${rep.join(', ')})`)}`;
     $('final-temps').textContent = formatDuree((etat.fin || Date.now()) - etat.debut);
     montrer('ecran-final');
   }
