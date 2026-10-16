@@ -179,6 +179,11 @@
   let fichierPhoto = null;
   function preparerPhoto(e) {
     fichierPhoto = null;
+    $('bloc-contact').hidden = !e.contact;
+    if (e.contact) {
+      $('contact-numero').textContent = CONFIG.telephone_affiche || '';
+      $('lien-whatsapp-depart').href = `https://wa.me/${CONFIG.whatsapp || ''}?text=${encodeURIComponent(`Ahoy ! L'équipage « ${etat.equipe || '?'} » (chef : ${etat.chef || '?'}) est prêt pour la Quête du Cap Homard.`)}`;
+    }
     $('photo-consigne').textContent = e.consigne || '';
     $('photo-fichier').accept = e.media || 'image/*,video/*';
     $('photo-fichier').value = '';

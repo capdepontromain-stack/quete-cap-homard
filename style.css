@@ -120,3 +120,6 @@ input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px 
 .photo-apercu img,.photo-apercu video{display:block;width:100%;max-height:320px;object-fit:cover;border-radius:10px;border:1px solid rgba(60,45,20,.3)}
 .btn-vert{background:linear-gradient(180deg,#3f9a60,var(--vert));color:#fff;box-shadow:0 4px 14px rgba(47,122,74,.35)}
 .lien-bouton{display:block;text-align:center;text-decoration:none;box-sizing:border-box}
+.bloc-contact{margin:0 0 14px;padding:12px 14px;border:1px dashed rgba(201,150,46,.7);border-radius:10px}
+.bloc-contact-titre{margin:0 0 4px;font-size:.95rem}
+.bloc-contact .btn{margin-top:8px}

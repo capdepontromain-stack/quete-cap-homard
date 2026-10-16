@@ -5,11 +5,24 @@ window.CONFIG = {
   "intro": "Cette feuille de route vous mènera peut-être au drapeau de La Réunion. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.",
   "final_titre": "Bravo pirates !",
   "final_sous_titre": "Drapeau de La Réunion trouvé",
-  "whatsapp": "262693817882"
+  "whatsapp": "262693817882",
+  "telephone_affiche": "06 93 81 78 82"
 };
 window.ETAPES = [
   {
+    "type": "photo",
+    "contact": true,
+    "titre": "L'équipage est prêt",
+    "lieu": "Départ",
+    "texte": "Avant de lever l'ancre, l'équipage se présente à l'animateur. Enregistrez son numéro, ouvrez la conversation WhatsApp, puis envoyez-lui une photo de tout l'équipage, dans la pose de votre choix. Cette conversation vous servira pour tous les défis à venir.",
+    "consigne": "Photo de l'équipage au complet, pose libre, envoyée à l'animateur sur WhatsApp.",
+    "media": "image/*",
+    "succes": "Bienvenue à bord, pirates ! L'animateur a reçu votre photo. La quête peut commencer.",
     "id": 1,
+    "empreintes": []
+  },
+  {
+    "id": 2,
     "titre": "Les signaux du mur",
     "lieu": "Terrain de construction",
     "texte": "Pour débuter, sur la carte vous devez vous repérer. À La Réunion, le plus célèbre des graffeurs s'appelle Jace : depuis 1992, ses petits Gouzous jaunes veillent sur les murs de l'île. Mais à quelques pas de vous, c'est l'œuvre d'un autre artiste qu'il faut trouver : Belly, qui a signé ce mur en 2024. Sur ce mur, pas forcément sur son dessin, quatre signaux vous attendent. Croisez-les sur la carte : à la croisée vous chercherez.",
@@ -37,13 +50,13 @@ window.ETAPES = [
     "consigne": "Photo de l'équipage au complet en position « Radeau de la Méduse ». Plus c'est dramatique, mieux c'est.",
     "media": "image/*",
     "succes": "Défi relevé ! Votre radeau est parti vers l'animateur. Au mur d'expression vous vous rendrez.",
-    "id": 2,
+    "id": 3,
     "illustration": "img/radeau-gericault.jpg",
     "illustration_legende": "Le Radeau de la Méduse, Théodore Géricault, 1819 (musée du Louvre)",
     "empreintes": []
   },
   {
-    "id": 3,
+    "id": 4,
     "titre": "Le mur d'expression",
     "lieu": "Mur d'expression",
     "texte": "Au mur, une image vous montre votre prochaine destination. Au contour de ses pieds vous creuserez. Énigme vous trouverez.",
@@ -59,7 +72,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "titre": "L'anagramme",
     "lieu": "Mur d'expression",
     "texte": "Posez votre réponse sur le papier : des lettres apparaissent. Remettez-les dans l'ordre pour connaître votre prochaine destination.",
@@ -75,7 +88,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "titre": "La bouteille à la mer",
     "lieu": "Caverne",
     "texte": "Dans la caverne, comme jetées à la mer, des bouteilles vous attendent. Le code d'honneur des pirates est clair : une seule bouteille par équipage, les autres restent pour ceux qui suivent. Son message semble illisible... L'ustensile remis au départ n'est pas là par hasard.",
@@ -97,7 +110,7 @@ window.ETAPES = [
     "consigne": "Vidéo courte (10 secondes maximum) de l'équipage, bouteille à la main, en plein cri de guerre.",
     "media": "video/*",
     "succes": "Défi relevé ! Votre cri de guerre est parti vers l'animateur. Sur le terrain de construction vous retournerez et « Architecte » au gardien vous direz.",
-    "id": 6,
+    "id": 7,
     "empreintes": []
   },
   {
@@ -110,7 +123,7 @@ window.ETAPES = [
     "placeholder": "Mot remis par Titi",
     "indice": "Seul Titi peut vous le donner, une fois le chantier validé. Écoutez bien votre messager.",
     "succes": "Chantier validé ! Place à l'épreuve suivante : l'archery tag.",
-    "id": 7,
+    "id": 8,
     "empreintes": [
       "2f6536df5e9972c8c14248b90777d5e455c5693bbea58857656bfe4ca9126948"
     ]
@@ -125,7 +138,7 @@ window.ETAPES = [
     "placeholder": "Mot remis par Benjam",
     "indice": "Benjam vous le donnera quand il aura été touché.",
     "succes": "Benjam est touché ! Regardez la carte de plus près : une croix y est apparue. Aux alentours de la croix vous irez.",
-    "id": 8,
+    "id": 9,
     "empreintes": [
       "40f4a2fa6cb12ea2aa517fe373e8367318cf7ba5791f1b0d87ed31d194a3f152",
       "9e25c610cea9cd4384544f6b50cc6df85c6d4f8f60d7bda1f5398996050fb417",
@@ -134,7 +147,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "titre": "La croix",
     "lieu": "Lieu de la croix",
     "texte": "Sur la carte, une croix est apparue, au cœur de la falaise. Rendez-vous sur place et cherchez bien dessous : un message étrange vous attend, fait de points et de traits. À vous de le déchiffrer, il vous mènera à une voix.",
@@ -152,7 +165,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "titre": "Le drapeau",
     "lieu": "Le rocher",
     "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",

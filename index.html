@@ -7,14 +7,14 @@
 <meta name="description" content="Chasse au trésor immersive à Cap Homard, un jeu Pull Up Événements.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#14110c">
-<meta name="version" content="18">
+<meta name="version" content="19">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="img/logo-pullup.png">
 <link rel="apple-touch-icon" href="img/logo-pullup.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=18">
+<link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 <div class="fond" aria-hidden="true"></div>
@@ -79,6 +79,11 @@
         <button id="btn-retour-courant" type="button" class="btn btn-or">Revenir à l'étape en cours</button>
       </div>
       <div id="bloc-photo" class="bloc-photo" hidden>
+        <div id="bloc-contact" class="bloc-contact" hidden>
+          <p class="bloc-contact-titre">Numéro de l'animateur : <strong id="contact-numero"></strong></p>
+          <a id="lien-vcard" class="btn btn-ligne lien-bouton" href="animateur.vcf" download="animateur-pullup.vcf">1. Enregistrer le contact de l'animateur</a>
+          <a id="lien-whatsapp-depart" class="btn btn-ligne lien-bouton" target="_blank" rel="noopener">2. Ouvrir WhatsApp et dire bonjour</a>
+        </div>
         <p id="photo-consigne" class="photo-consigne"></p>
         <input id="photo-fichier" type="file" accept="image/*,video/*" capture="environment" hidden>
         <button id="btn-photo" type="button" class="btn btn-or">📷 Prendre la photo ou la vidéo</button>
@@ -169,7 +174,7 @@
   <img id="visionneuse-image" alt="">
 </div>
 
-<script src="etapes.js?v=18"></script>
-<script src="app.js?v=18"></script>
+<script src="etapes.js?v=19"></script>
+<script src="app.js?v=19"></script>
 </body>
 </html>
