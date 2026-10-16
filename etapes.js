@@ -31,12 +31,12 @@ window.ETAPES = [
   },
   {
     "type": "photo",
-    "titre": "Le cri de guerre",
+    "titre": "Le Radeau de la Méduse",
     "lieu": "En route vers le mur d'expression",
-    "texte": "Sur le chemin du mur d'expression, trouvez le panneau d'entrée de ville de Boucan Canot. Toute l'équipe devant le panneau : filmez ou photographiez votre cri de guerre !",
-    "consigne": "Photo ou vidéo de l'équipage au complet, devant le panneau, en plein cri de guerre.",
-    "media": "image/*,video/*",
-    "succes": "Défi relevé ! Votre cri de guerre est parti vers l'animateur. Au mur d'expression vous vous rendrez.",
+    "texte": "Sur votre chemin vers le mur d'expression, arrêtez-vous où bon vous semble. Toute l'équipe rejoue le célèbre tableau de Géricault, Le Radeau de la Méduse : les naufragés entassés, un bras tendu vers l'horizon, l'espoir d'un navire au loin !",
+    "consigne": "Photo de l'équipage au complet en position « Radeau de la Méduse ». Plus c'est dramatique, mieux c'est.",
+    "media": "image/*",
+    "succes": "Défi relevé ! Votre radeau est parti vers l'animateur. Au mur d'expression vous vous rendrez.",
     "id": 2,
     "empreintes": []
   },
