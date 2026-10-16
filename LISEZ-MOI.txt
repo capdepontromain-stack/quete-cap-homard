@@ -71,18 +71,14 @@ DÉFIS PHOTO / VIDÉO (étapes de type "photo" dans prive/reponses.json)
   Pour ajouter un défi : copier le bloc "type": "photo" (titre, lieu, texte, consigne, media, succes)
   à l'endroit voulu dans la liste. La numérotation se refait toute seule.
 
-MESSAGERIE TÉLÉPHONIQUE (06 93 81 78 82) : texte à enregistrer avant demain
-  « Bravo, aventuriers ! Vous avez déchiffré le message de la croix. Ne lâchez rien : le but est proche.
-    Pour continuer votre quête, vous devez entrer dans la feuille de route un mot que je vais vous faire deviner.
-    Écoutez bien.
+MESSAGERIE TÉLÉPHONIQUE (06 93 81 78 82) : texte à enregistrer avant demain (version validée par Romain)
+  « Bravo, aventuriers ! Ne lâchez rien, le but est proche.
+    Pour continuer votre quête, répondez à cette énigme.
     Chez les Grecs, je suis le fils du Soleil, et les savants m'appellent encore ainsi.
-    Je niche dans les falaises de Cap Homard, et quand je prends mon envol,
-    deux longs rubans blancs traînent derrière moi.
-    Mon nom cache un brin de chaume, et une compagnie aérienne de l'île m'a choisi pour emblème.
+    Entre ciel et falaise, traînée blanche derrière moi, mon nom cache un brin de chaume.
     Qui suis-je ?
-    Entrez votre réponse dans la feuille de route, et les dernières consignes s'afficheront.
-    Bon vent, pirates ! »
-  Réponse attendue : PAILLE-EN-QUEUE (fils du Soleil = Phaéton, son nom scientifique ; brin de chaume = paille ;
-  rubans = ses longues plumes de queue ; emblème d'Air Austral).
-  Si une équipe bloque trop longtemps, indice à donner de vive voix : « c'est un oiseau, et son nom
-  finit par la partie du corps qu'il traîne derrière lui ».
+    Bon vent, aventuriers. Ne lâchez rien. »
+  Réponse attendue dans l'appli : PAILLE-EN-QUEUE (fils du Soleil = Phaéton, son nom scientifique ;
+  brin de chaume = paille ; traînée blanche = ses longues plumes de queue).
+  Indice de secours à donner de vive voix : « c'est un oiseau, et son nom finit par la partie du corps
+  qu'il traîne derrière lui ».
