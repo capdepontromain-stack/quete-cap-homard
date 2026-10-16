@@ -193,10 +193,23 @@ window.ETAPES = [
     ]
   },
   {
+    "type": "photo",
+    "titre": "Le point de vue",
+    "lieu": "Haut de la falaise",
+    "texte": "Montez jusqu'à la croix. Là-haut, le point de vue sur Cap Homard et la mer d'émeraudes est incroyable : prenez le temps d'en profiter. Puis une photo d'équipe, façon solidarité : un équipage soudé, qui va droit au but et qui ne lâche rien.",
+    "image": "img/carte-croix.jpg",
+    "legende": "La croix sur la falaise (touchez pour agrandir)",
+    "consigne": "Photo de l'équipage au complet, le point de vue en arrière-plan, en mode solidarité : soudés, droit au but, on ne lâche rien.",
+    "media": "image/*",
+    "succes": "Magnifique ! Votre photo est partie vers l'animateur. Maintenant, cherchez bien sous la croix...",
     "id": 11,
+    "empreintes": []
+  },
+  {
+    "id": 12,
     "titre": "La croix",
     "lieu": "Lieu de la croix",
-    "texte": "Sur la carte, une croix est apparue, au cœur de la falaise. Rendez-vous sur place et cherchez bien dessous : un message étrange vous attend, fait de points et de traits. À vous de le déchiffrer, il vous mènera à une voix.",
+    "texte": "Vous y êtes. Sous la croix, cherchez bien : un message étrange vous attend, fait de points et de traits. À vous de le déchiffrer, il vous mènera à une voix.",
     "image": "img/carte-croix.jpg",
     "legende": "Une croix est apparue sur la carte (touchez pour agrandir)",
     "question": "Quel numéro de téléphone se cache dans le message ?",
@@ -211,7 +224,7 @@ window.ETAPES = [
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "titre": "Le drapeau",
     "lieu": "Le rocher",
     "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le drapeau de La Réunion vous attend.",
