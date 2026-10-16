@@ -14,8 +14,9 @@ etapes = []
 for i, e in enumerate(src["etapes"]):
     e = dict(e)
     e["id"] = i + 1  # numérotation automatique dans l'ordre du fichier
-    if e.get("type") == "photo":
+    if e.get("type") in ("photo", "libre"):
         e["empreintes"] = []
+        e.pop("reponses", None)
     else:
         e["empreintes"] = [hashlib.sha256(norm(r).encode()).hexdigest() for r in e.pop("reponses")]
     etapes.append(e)

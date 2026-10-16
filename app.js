@@ -167,14 +167,17 @@
     $('btn-indice').hidden = !(e.indice && erreurs >= 3) || !!lectureSeule;
     $('indice').hidden = true; $('indice').textContent = e.indice || '';
     const photo = (e.type === 'photo');
-    $('form-reponse').hidden = !!lectureSeule || photo;
+    const libre = (e.type === 'libre');
+    $('form-reponse').hidden = !!lectureSeule || photo || libre;
     $('bloc-photo').hidden = !!lectureSeule || !photo;
+    $('bloc-libre').hidden = !!lectureSeule || !libre;
+    if (libre) $('btn-libre').textContent = e.bouton || 'Continuer';
     if (photo && !lectureSeule) preparerPhoto(e);
     $('deja-valide').hidden = !lectureSeule;
     $('deja-valide-texte').textContent = lectureSeule ? (e.succes || '') : '';
-    $('deja-valide').querySelector('.deja-valide-titre').textContent = photo ? '✓ Défi déjà relevé' : '✓ Étape déjà validée';
+    $('deja-valide').querySelector('.deja-valide-titre').textContent = photo ? '✓ Défi déjà relevé' : (libre ? '✓ Étape terminée' : '✓ Étape déjà validée');
     montrer('ecran-etape');
-    if (!lectureSeule && !photo) setTimeout(() => $('reponse').focus(), 350);
+    if (!lectureSeule && !photo && !libre) setTimeout(() => $('reponse').focus(), 350);
   }
 
   // ---------- Défi photo / vidéo : prise de vue, puis partage vers WhatsApp, puis déblocage ----------
@@ -239,6 +242,8 @@
     $('photo-retour').className = 'retour erreur';
   });
   $('btn-photo-fait').addEventListener('click', () => { if (fichierPhoto) validerEtape(); });
+  $('btn-libre').addEventListener('click', () => validerEtape());
+
   $('btn-plus-tard').addEventListener('click', () => {
     const e = ETAPES[etat.etape || 0];
     etat.reportes = etat.reportes || [];

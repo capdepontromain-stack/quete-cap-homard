@@ -239,13 +239,9 @@ window.ETAPES = [
     "texte": "Dernière ligne droite. Positionnez-vous dans le tunnel et traversez, direction la mer. Puis, à vingt mètres en contrebas, comme trois frères entrelacés, vous verrez et rejoindrez. À vos côtés, l'indication Cap Homard est là pour vous assister. Une fois dessous, direction dix degrés nord : à quarante mètres, il annonce le danger. Prenez le chemin face à la mer, beau, long et décroché. Une trace sur lui pour vous aiguiller. Vous creuserez, et drapeau vous trouverez.",
     "image": null,
     "legende": null,
-    "question": "Quel est le mot inscrit avec le drapeau ?",
-    "placeholder": "Mot final",
-    "indice": "Relisez chaque phrase comme une étape : le tunnel, les trois frères, l'indication, le danger, le chemin, la trace. Une boussole se cache peut-être dans votre coffre.",
     "succes": "Bravo, aventuriers, vous y êtes arrivés !",
-    "empreintes": [
-      "7b1b3e9160a43892afd2ff4626f2f0b6e8550b96bb2cd2a1b9158c799421f6ae",
-      "23ef51f5beb3e208342373118f2a47cdc94d3228e181a867194ecf3aae27c414"
-    ]
+    "type": "libre",
+    "bouton": "Nous avons trouvé le drapeau !",
+    "empreintes": []
   }
 ];
