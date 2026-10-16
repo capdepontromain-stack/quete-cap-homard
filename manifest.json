@@ -1,0 +1,10 @@
+{
+  "name": "La Quête du Cap Homard",
+  "short_name": "Cap Homard",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#14110c",
+  "theme_color": "#14110c",
+  "lang": "fr",
+  "icons": [{ "src": "img/logo-pullup.png", "sizes": "512x512", "type": "image/png" }]
+}

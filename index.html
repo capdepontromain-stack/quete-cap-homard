@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Quête du Cap Homard</title>
+<meta name="description" content="Chasse au trésor immersive à Cap Homard, un jeu Pull Up Événements.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14110c">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/logo-pullup.png">
+<link rel="apple-touch-icon" href="img/logo-pullup.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<div class="fond" aria-hidden="true"></div>
+<div class="voile" aria-hidden="true"></div>
+
+<header class="entete">
+  <div class="entete-ligne">
+    <span class="marque">Pull Up Événements</span>
+    <span id="chrono" class="chrono" hidden>00:00</span>
+  </div>
+  <div id="progression" class="progression" hidden>
+    <div class="barre"><div id="barre-remplie" class="barre-remplie"></div></div>
+    <span id="progression-texte" class="progression-texte"></span>
+  </div>
+</header>
+
+<main id="app" class="app">
+
+  <!-- Écran d'accueil -->
+  <section id="ecran-accueil" class="ecran" hidden>
+    <div class="parchemin accueil">
+      <div class="boussole" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/><polygon points="50,8 56,50 50,92 44,50" fill="currentColor"/><polygon points="8,50 50,44 92,50 50,56" fill="currentColor" opacity=".55"/><circle cx="50" cy="50" r="4" fill="#14110c"/><text x="50" y="22" text-anchor="middle" font-size="11" font-family="serif" fill="#14110c" font-weight="bold">N</text></svg>
+      </div>
+      <p class="sur-titre">Escape game outdoor</p>
+      <h1>La Quête du Cap Homard</h1>
+      <p class="accroche">Sur les traces d'un totem enfoui</p>
+      <div class="regles">
+        <p>Cette feuille de route vous mènera peut-être au trésor. Faites preuve de réflexion : la communication entre vous est une des clés de cette aventure.</p>
+        <p>Proche est l'adversaire, discrétion opère. Le code d'honneur des chercheurs de trésors est toujours prospère.</p>
+        <p>À chaque étape, un mot de passe trouvé sur le terrain débloque la suite.</p>
+      </div>
+      <form id="form-equipe" class="form-equipe" autocomplete="off">
+        <label for="nom-equipe">Nom de votre équipage</label>
+        <input id="nom-equipe" type="text" maxlength="30" placeholder="Ex. : Les Corsaires" required>
+        <button type="submit" class="btn btn-or">Commencer la quête</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Écran d'étape -->
+  <section id="ecran-etape" class="ecran" hidden>
+    <div class="parchemin">
+      <p class="etape-numero"><span id="etape-numero"></span> <span class="sep">·</span> <span id="etape-lieu"></span></p>
+      <h2 id="etape-titre"></h2>
+      <p id="etape-texte" class="etape-texte"></p>
+      <figure id="etape-figure" class="etape-figure" hidden>
+        <img id="etape-image" alt="" loading="lazy">
+        <figcaption id="etape-legende"></figcaption>
+      </figure>
+      <form id="form-reponse" class="form-reponse" autocomplete="off">
+        <label id="etape-question" for="reponse"></label>
+        <div class="champ">
+          <input id="reponse" type="text" autocapitalize="characters" autocorrect="off" spellcheck="false" required>
+          <button type="submit" class="btn btn-or">Valider</button>
+        </div>
+        <p id="retour" class="retour" aria-live="polite"></p>
+      </form>
+      <div class="actions">
+        <button id="btn-indice" type="button" class="btn btn-ligne" hidden>Demander un indice</button>
+        <p id="indice" class="indice" hidden></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Écran de transition (réussite) -->
+  <section id="ecran-succes" class="ecran" hidden>
+    <div class="parchemin succes">
+      <div class="sceau" aria-hidden="true">✓</div>
+      <h2>Mot de passe validé</h2>
+      <p id="succes-texte" class="succes-texte"></p>
+      <button id="btn-suite" type="button" class="btn btn-or">Étape suivante</button>
+    </div>
+  </section>
+
+  <!-- Écran final -->
+  <section id="ecran-final" class="ecran" hidden>
+    <div class="parchemin final">
+      <p class="sur-titre">Quête accomplie</p>
+      <h1>Bravo pirates !</h1>
+      <p class="final-equipe">Équipage <strong id="final-equipe"></strong></p>
+      <p class="final-temps">Temps de quête : <strong id="final-temps"></strong></p>
+      <div class="regles">
+        <p>Cris de joie retentiront, mais toujours en discrétion. Respect éternel pour vous, vos adversaires auront.</p>
+        <p>Ticket vous prendrez. Coffre à sa place vous laisserez pour les équipes d'affilée.</p>
+        <p>Bravo pirates, vous y êtes arrivés : avec fierté vous marcherez.</p>
+      </div>
+      <img src="img/rocher.jpg" alt="Le rocher de Cap Homard" class="final-image">
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <img src="img/logo-pullup.png" alt="" width="36" height="36">
+  <span>Un jeu Pull Up Événements</span>
+</footer>
+
+<!-- Visionneuse d'image plein écran -->
+<div id="visionneuse" class="visionneuse" hidden>
+  <button id="visionneuse-fermer" type="button" class="visionneuse-fermer" aria-label="Fermer">✕</button>
+  <img id="visionneuse-image" alt="">
+</div>
+
+<script src="etapes.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

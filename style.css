@@ -1,0 +1,85 @@
+:root{
+  --noir:#14110c; --encre:#2a2318; --creme:#f3e9d2; --creme-2:#e9dcc0; --or:#c9962e; --or-clair:#e6b94a;
+  --gris:#6b6253; --rouge:#a33a2a; --vert:#2f7a4a;
+  --ombre:0 18px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;min-height:100%}
+body{font-family:'Lora',Georgia,serif;color:var(--encre);background:var(--noir);-webkit-font-smoothing:antialiased;position:relative;padding-bottom:70px}
+.fond{position:fixed;inset:0;background:url("img/rocher.jpg") center 30%/cover no-repeat;z-index:-2;transform:scale(1.02)}
+.voile{position:fixed;inset:0;background:linear-gradient(180deg,rgba(10,8,5,.55) 0%,rgba(10,8,5,.35) 40%,rgba(10,8,5,.8) 100%);z-index:-1}
+
+.entete{position:sticky;top:0;z-index:5;padding:10px 16px 8px;background:linear-gradient(180deg,rgba(20,17,12,.95),rgba(20,17,12,.6) 80%,transparent);color:var(--creme)}
+.entete-ligne{display:flex;justify-content:space-between;align-items:center;max-width:640px;margin:0 auto}
+.marque{font-family:'Pirata One',serif;letter-spacing:.08em;font-size:1.05rem;color:var(--or-clair)}
+.chrono{font-variant-numeric:tabular-nums;font-size:.95rem;background:rgba(0,0,0,.45);border:1px solid rgba(201,150,46,.5);padding:3px 10px;border-radius:999px}
+.progression{max-width:640px;margin:8px auto 0;display:flex;align-items:center;gap:10px}
+.barre{flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden}
+.barre-remplie{height:100%;width:0;background:linear-gradient(90deg,var(--or),var(--or-clair));transition:width .5s ease}
+.progression-texte{font-size:.8rem;opacity:.9;white-space:nowrap}
+
+.app{max-width:640px;margin:0 auto;padding:12px 16px 24px}
+.ecran[hidden]{display:none}
+.parchemin{background:var(--creme);background-image:radial-gradient(ellipse at 20% 10%,rgba(255,255,255,.5),transparent 50%),radial-gradient(ellipse at 80% 90%,rgba(140,100,40,.18),transparent 55%);border-radius:14px;padding:26px 22px 24px;box-shadow:var(--ombre);border:1px solid rgba(120,90,40,.35);animation:apparition .45s ease both}
+@keyframes apparition{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1,h2{font-family:'Pirata One',serif;font-weight:400;letter-spacing:.02em;margin:0 0 10px;line-height:1.1}
+h1{font-size:2.5rem;color:var(--noir)}
+h2{font-size:1.9rem;color:var(--noir)}
+.sur-titre{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--or);margin:0 0 6px;font-weight:600}
+.accroche{font-style:italic;color:var(--gris);margin:0 0 18px}
+.accueil{text-align:center}
+.boussole{width:84px;height:84px;margin:0 auto 10px;color:var(--or);animation:tourne 14s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.regles{text-align:left;border-top:1px solid rgba(201,150,46,.6);border-bottom:1px solid rgba(201,150,46,.6);padding:12px 0;margin:0 0 18px;font-size:.95rem;line-height:1.5}
+.regles p{margin:0 0 8px}
+.regles p:last-child{margin:0}
+
+label{display:block;font-weight:600;margin-bottom:8px;font-size:1rem}
+input[type=text]{width:100%;font:inherit;font-size:1.1rem;padding:12px 14px;border:2px solid rgba(60,45,20,.35);border-radius:10px;background:#fffaf0;color:var(--noir);text-transform:uppercase;letter-spacing:.06em}
+input[type=text]:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px rgba(201,150,46,.25)}
+#nom-equipe{text-transform:none;letter-spacing:0;margin-bottom:14px}
+.btn{font:inherit;font-weight:600;border:0;border-radius:10px;padding:13px 20px;cursor:pointer;transition:transform .08s,filter .2s}
+.btn:active{transform:scale(.98)}
+.btn-or{background:linear-gradient(180deg,var(--or-clair),var(--or));color:var(--noir);box-shadow:0 4px 14px rgba(201,150,46,.35)}
+.btn-or:hover{filter:brightness(1.05)}
+.btn-ligne{background:transparent;border:2px solid var(--or);color:var(--encre)}
+.form-equipe .btn{width:100%}
+
+.etape-numero{margin:0 0 4px;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--or);font-weight:600}
+.etape-numero .sep{margin:0 4px;color:var(--gris)}
+.etape-texte{font-size:1.02rem;line-height:1.55;margin:0 0 16px}
+.etape-figure{margin:0 0 18px}
+.etape-figure img{display:block;width:100%;border-radius:10px;border:1px solid rgba(60,45,20,.3);cursor:zoom-in}
+.etape-figure figcaption{font-size:.8rem;color:var(--gris);margin-top:6px;text-align:center;font-style:italic}
+.champ{display:flex;gap:8px}
+.champ input{flex:1;min-width:0}
+.retour{min-height:1.4em;margin:10px 0 0;font-size:.95rem;font-weight:600}
+.retour.erreur{color:var(--rouge)}
+.retour.ok{color:var(--vert)}
+.secoue{animation:secoue .4s}
+@keyframes secoue{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+.actions{margin-top:14px}
+.actions .btn{width:100%}
+.indice{margin:12px 0 0;padding:12px 14px;background:rgba(201,150,46,.14);border-left:4px solid var(--or);border-radius:8px;font-style:italic;line-height:1.5}
+
+.succes{text-align:center}
+.sceau{width:72px;height:72px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-size:2.2rem;color:var(--creme);background:radial-gradient(circle at 35% 30%,#3f9a60,var(--vert));box-shadow:0 8px 20px rgba(47,122,74,.4);animation:pop .5s cubic-bezier(.2,1.4,.5,1) both}
+@keyframes pop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+.succes-texte{font-size:1.05rem;line-height:1.55;margin:0 0 20px}
+.succes .btn{width:100%}
+
+.final{text-align:center}
+.final-equipe,.final-temps{margin:0 0 6px;font-size:1.05rem}
+.final-temps{margin-bottom:16px}
+.final-image{width:100%;border-radius:10px;margin-top:6px;border:1px solid rgba(60,45,20,.3)}
+
+.pied{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));color:var(--creme);font-size:.8rem;letter-spacing:.06em;background:linear-gradient(0deg,rgba(20,17,12,.9),transparent);pointer-events:none}
+.pied img{border-radius:50%;background:#000}
+
+.visionneuse{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto;touch-action:pinch-zoom}
+.visionneuse[hidden]{display:none}
+.visionneuse img{max-width:100%;max-height:100%;border-radius:8px}
+.visionneuse-fermer{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.3rem;cursor:pointer}
+
+@media (min-width:700px){h1{font-size:3rem}.parchemin{padding:34px 36px 30px}}

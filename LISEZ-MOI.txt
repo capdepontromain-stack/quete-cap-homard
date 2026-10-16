@@ -1,0 +1,26 @@
+LA QUÊTE DU CAP HOMARD : mode d'emploi
+======================================
+
+Adresse du jeu (à envoyer aux équipes ou à mettre en QR code) :
+https://capdepontromain-stack.github.io/quete-cap-homard/
+
+Pour recommencer une partie sur un téléphone (remettre à zéro) :
+https://capdepontromain-stack.github.io/quete-cap-homard/?reset=1
+
+Les mots de passe (dans l'ordre) :
+  1. MUR D'EXPRESSION   (les 3 signaux croisés sur la carte)
+  2. SOLEIL             (énigme déterrée au pied de l'arbre)
+  3. CAVERNE            (anagramme de 7 lettres)
+  4. ARCHITECTE         (bouteille à la mer, lecture au miroir)
+  5. ABCD               ⚠️ À REMPLACER par les 4 lettres des épreuves
+  6. 0692000000         ⚠️ À REMPLACER par le numéro donné en morse
+  7. TOTEM              ⚠️ À CONFIRMER : mot écrit avec le trésor
+
+Les majuscules, accents, espaces et apostrophes ne comptent pas.
+Après 3 erreurs, un bouton « Demander un indice » apparaît.
+
+Pour changer un mot de passe ou un texte :
+  1. Ouvrir prive/reponses.json (ce fichier n'est jamais mis en ligne).
+  2. Modifier, enregistrer.
+  3. Demander à Claude : « mets à jour la quête Cap Homard »
+     (ou lancer : python3 generer-etapes.py puis git add -A && git commit -m "maj" && git push).

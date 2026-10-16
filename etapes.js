@@ -1,0 +1,115 @@
+// Fichier généré par generer-etapes.py : ne pas modifier à la main.
+window.ETAPES = [
+  {
+    "id": 1,
+    "titre": "Les signaux du mur",
+    "lieu": "Terrain de construction",
+    "texte": "Pour débuter, sur la carte au trésor vous devez vous repérer. Au mur voisin, trois signaux vous attendent. Croisez-les sur la carte : à la croisée vous chercherez.",
+    "image": "img/carte.jpg",
+    "legende": "La carte au trésor de Cap Homard (touchez pour agrandir)",
+    "question": "Quel lieu désignent les signaux ?",
+    "placeholder": "Nom du lieu",
+    "indice": "Les mots en haut de la carte sont des colonnes, les lettres à droite sont des lignes. Un roi, un A, un nuage en forme de F...",
+    "succes": "Bien vu, pirates ! Au mur d'expression vous vous rendrez. Nouveau lieu repéré, vous y regarderez de plus près : prochaine destination vous trouverez.",
+    "empreintes": [
+      "d4d2f3248708da2a01db5df8ce6f52a8ae82dd169fdaa02fedb0b94457217bf2",
+      "c8e5dba99f9b46cb28d7515061559b4e874d56a266a43a3c24fa45c6ad36d9fe",
+      "b8bc0e4f01a0ebdbfe99180d4ea3cb49092d268fecd0789d2e9372fa616e9542",
+      "dff977c83c3638e39608b4cc6fffa28d47cb6df1db3131c9e6898f93bf934d87",
+      "06ef8a8ae299ab626709b1ad4fdfe6dab30717a5b751a8928d736dc7dfcd6110"
+    ]
+  },
+  {
+    "id": 2,
+    "titre": "Le mur d'expression",
+    "lieu": "Mur d'expression",
+    "texte": "Au mur, une image vous montre votre prochaine destination. Au contour de ses pieds vous creuserez. Énigme vous trouverez.",
+    "image": null,
+    "legende": null,
+    "question": "Quelle est la réponse à l'énigme déterrée ?",
+    "placeholder": "Un seul mot",
+    "indice": "Il se lève chaque matin sans un bruit, et pourtant tout le monde se réveille.",
+    "succes": "Exact ! Pour avancer, la réponse doit être utilisée au contact du papier. Un anagramme de 7 lettres apparaît, prêt à vous guider.",
+    "empreintes": [
+      "e93e24c1b877a15df5e4a8cbb20f351b891b750779cf5e8fb99119a7142d89cf",
+      "afa7498a31c4a0c7a0ad4bbfdb9f039f8e5ccb20a5b63cbc3b1eecc402824e70"
+    ]
+  },
+  {
+    "id": 3,
+    "titre": "L'anagramme",
+    "lieu": "Mur d'expression",
+    "texte": "Posez votre réponse sur le papier : des lettres apparaissent. Remettez-les dans l'ordre pour connaître votre prochaine destination.",
+    "image": null,
+    "legende": null,
+    "question": "Quel mot de 7 lettres se cache dans l'anagramme ?",
+    "placeholder": "7 lettres",
+    "indice": "C'est un lieu de la carte, creusé dans la roche, au bord de la mer d'émeraudes.",
+    "succes": "À la caverne ! Dans ce lieu, bouteille à la mer vous chercherez. Prochain lieu et mot de passe y sont indiqués.",
+    "empreintes": [
+      "d3b8a1fb9ef5b2df5462c473e6cea3a7d3d949f6c0aff1749893ef9beba28726",
+      "ad1ffe2e8814f19db745615a062d992f4ffe0195d9f4b1a0444ee89b7cfc396f"
+    ]
+  },
+  {
+    "id": 4,
+    "titre": "La bouteille à la mer",
+    "lieu": "Caverne",
+    "texte": "Le message de la bouteille est brouillé. Un objet de votre coffre de départ vous aidera à le lire.",
+    "image": null,
+    "legende": null,
+    "question": "Quel est le mot de passe à donner au gardien du lieu ?",
+    "placeholder": "Mot de passe",
+    "indice": "Regardez le message dans le miroir.",
+    "succes": "Mot de passe validé ! Sur le terrain de construction vous retournerez et au gardien vous le direz. De cohésion vous ferez preuve : quatre épreuves, quatre lettres.",
+    "empreintes": [
+      "47664cd5888be94f0e70ed10f7f833c9c857bdb11158faff2efc67dfecc6a228"
+    ]
+  },
+  {
+    "id": 5,
+    "titre": "Les épreuves de cohésion",
+    "lieu": "Terrain de construction",
+    "texte": "Le gardien vous soumet quatre épreuves. Chaque épreuve réussie vous rapporte une lettre. Les quatre lettres débloquent la suite.",
+    "image": null,
+    "legende": null,
+    "question": "Entrez les 4 lettres gagnées aux épreuves.",
+    "placeholder": "4 lettres",
+    "indice": "Il faut réussir les quatre épreuves. Le gardien a peut-être un conseil pour vous...",
+    "succes": "Papier en main vous aurez : posez le calque sur la carte au trésor. Émeraudes, diamants et mort réunis... une croix apparaît. Aux alentours de la croix vous irez.",
+    "empreintes": [
+      "88d4266fd4e6338d13b845fcf289579d209c897823b9217da3e161936f031589"
+    ]
+  },
+  {
+    "id": 6,
+    "titre": "La croix",
+    "lieu": "Lieu de la croix",
+    "texte": "Arrivé sur ce lieu marqué de plusieurs croix blanches, sous l'une d'entre elles vous chercherez. Troisième roulette Énigma vous trouverez. Les 3 réunies vous donneront le ton.",
+    "image": null,
+    "legende": null,
+    "question": "Quel numéro le message en morse vous donne-t-il ?",
+    "placeholder": "Numéro (chiffres)",
+    "indice": "Point, trait... Chaque groupe de signes est un chiffre. Un alphabet morse se cache peut-être dans votre coffre.",
+    "succes": "Composez ce numéro : une voix vous attend. Nouvelle quête vous est donnée. Le but est proche, à vous de ne rien lâcher.",
+    "empreintes": [
+      "eb143c6ca2c90cd5c29e4a1f6b6ac8887035c80264791036ad45b74d38f3d50f"
+    ]
+  },
+  {
+    "id": 7,
+    "titre": "Le trésor",
+    "lieu": "Le rocher",
+    "texte": "Suivez les dernières consignes de la voix. Au pied du rocher emblème de Cap Homard, le trésor vous attend.",
+    "image": "img/rocher.jpg",
+    "legende": "Le rocher de Cap Homard",
+    "question": "Quel est le mot inscrit sur le ticket du trésor ?",
+    "placeholder": "Mot du trésor",
+    "indice": "Vous êtes sur les traces d'un totem enfoui...",
+    "succes": "Bravo pirates, vous y êtes arrivés !",
+    "empreintes": [
+      "7b1b3e9160a43892afd2ff4626f2f0b6e8550b96bb2cd2a1b9158c799421f6ae",
+      "23ef51f5beb3e208342373118f2a47cdc94d3228e181a867194ecf3aae27c414"
+    ]
+  }
+];
