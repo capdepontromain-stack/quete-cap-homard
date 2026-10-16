@@ -14,7 +14,7 @@ Les mots de passe (dans l'ordre) :
   4. ARCHITECTE         (bouteille à la mer, lecture au miroir)
   5. CAPH               (les 4 épreuves)
   6. 0693817882         (numéro de Romain donné en morse ; 069293817882 accepté aussi)
-  7. TOTEM              ⚠️ À CONFIRMER : mot écrit avec le trésor
+  7. TOTEM              (mot du trésor, confirmé)
 
 Les majuscules, accents, espaces et apostrophes ne comptent pas.
 Après 3 erreurs, un bouton « Demander un indice » apparaît.
