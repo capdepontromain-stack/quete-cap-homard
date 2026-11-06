@@ -12,6 +12,7 @@
       const { v } = await r.json();
       const locale = (document.querySelector('meta[name="version"]') || {}).content;
       const u = new URL(URL_INITIALE);
+      u.searchParams.delete('reset');
       if (String(v) !== String(locale) && u.searchParams.get('maj') !== String(v)) {
         u.searchParams.set('maj', v);
         location.replace(u.toString());
@@ -26,6 +27,8 @@
   if (CONFIG.intro) $('intro').textContent = CONFIG.intro;
   if (CONFIG.final_titre) $('final-titre').textContent = CONFIG.final_titre;
   if (CONFIG.final_sous_titre) $('final-sous-titre').textContent = CONFIG.final_sous_titre;
+  if (CONFIG.bienvenue) { $('splash-bravo').textContent = CONFIG.bienvenue; $('splash-bravo').hidden = false; }
+  if (CONFIG.final_texte) $('final-texte').textContent = CONFIG.final_texte;
   const CLE = 'quete-cap-homard-v1';
 
   // ---------- État sauvegardé (survit à un rechargement de la page) ----------
@@ -40,10 +43,7 @@
   // est mise de côté et proposée en « Reprendre » sur l'accueil, pour ne pas la perdre.
   const SAUVEGARDE = 'quete-cap-homard-sauvegarde';
   if (PARAMS.has('reset')) {
-    try {
-      if (etat.debut && !etat.fin) localStorage.setItem(SAUVEGARDE, JSON.stringify(etat));
-      else localStorage.removeItem(SAUVEGARDE);
-    } catch (e) {}
+    try { localStorage.removeItem(SAUVEGARDE); } catch (e) {}
     etat = {}; sauver();
   }
   if (location.search) history.replaceState(null, '', location.pathname);
@@ -52,11 +52,29 @@
   function normaliser(s) {
     return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
   }
+  // Variantes tolérées d'une saisie : sans article en tête (le, la, les, l', un, une, de, du, des),
+  // et à une lettre près (on compare les formes privées d'une lettre, comme le générateur).
+  function variantes(s) {
+    const base = new Set([s]);
+    const m = s.match(/^(les|le|la|l|une|un|des|de|du|au|aux)(.{4,})$/);
+    if (m) base.add(m[2]);
+    const out = new Set(base);
+    base.forEach((b) => {
+      if (b.length < 5) return;
+      for (let k = 0; k < b.length; k++) {
+        const d1 = b.slice(0, k) + b.slice(k + 1);
+        out.add(d1);
+        if (b.length >= 8) for (let j = 0; j < d1.length; j++) out.add(d1.slice(0, j) + d1.slice(j + 1));
+      }
+    });
+    return Array.from(out);
+  }
   async function empreinte(s) {
     const data = new TextEncoder().encode(s);
     const buf = await crypto.subtle.digest('SHA-256', data);
     return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
   }
+  const empreinteCourte = async (s) => (await empreinte(s)).slice(0, 24);
 
   // ---------- Chrono ----------
   function formatDuree(ms) {
@@ -121,14 +139,7 @@
   }
 
   function rendreAccueil() {
-    let sauv = null;
-    try { sauv = JSON.parse(localStorage.getItem(SAUVEGARDE)); } catch (e) {}
-    const btn = $('btn-reprendre');
-    if (sauv && sauv.debut && !sauv.fin) {
-      btn.hidden = false;
-      btn.textContent = `Reprendre la partie de « ${sauv.equipe} » (étape ${(sauv.etape || 0) + 1})`;
-      btn.onclick = () => { etat = sauv; sauver(); try { localStorage.removeItem(SAUVEGARDE); } catch (e) {} rendre(); };
-    } else { btn.hidden = true; }
+    $('btn-reprendre').hidden = true; // chaque scan du QR code repart de zéro, jamais de « Reprendre »
     montrer('ecran-accueil');
   }
 
@@ -188,7 +199,11 @@
     if (e.contact) {
       $('contact-numero').textContent = CONFIG.telephone_affiche || '';
       $('lien-whatsapp-depart').href = `https://wa.me/${CONFIG.whatsapp || ''}?text=${encodeURIComponent(`Ahoy ! L'équipage « ${etat.equipe || '?'} » (chef : ${etat.chef || '?'}) est prêt pour la Quête du Cap Homard.`)}`;
+      $('lien-whatsapp-depart').onclick = () => { etat.messageEnvoye = true; sauver(); $('bloc-photo-prise').hidden = false; $('attente-message').hidden = true; };
     }
+    // Sur le premier défi, la photo n'apparaît qu'une fois le message de l'équipage envoyé sur WhatsApp
+    $('bloc-photo-prise').hidden = !!e.contact && !etat.messageEnvoye;
+    $('attente-message').hidden = !e.contact || !!etat.messageEnvoye;
     $('photo-consigne').textContent = e.consigne || '';
     $('photo-fichier').accept = e.media || 'image/*,video/*';
     $('photo-fichier').value = '';
@@ -277,6 +292,7 @@
     $('final-reportes-liste').innerHTML = rep.map((t) => `<li>${t}</li>`).join('');
     $('final-whatsapp').href = `https://wa.me/${CONFIG.whatsapp || ''}?text=${encodeURIComponent(`Équipage « ${etat.equipe || '?'} » : voici nos chefs-d'œuvre en retard (${rep.join(', ')})`)}`;
     $('final-temps').textContent = formatDuree((etat.fin || Date.now()) - etat.debut);
+    $('final-photos').href = `https://wa.me/${CONFIG.whatsapp || ''}?text=${encodeURIComponent(`Équipage « ${etat.equipe || '?'} » : voici d'autres photos de notre quête !`)}`;
     montrer('ecran-final');
   }
 
@@ -303,8 +319,8 @@
     verrou = true;
     let ok = false;
     try {
-      const h = await empreinte(saisie);
-      ok = e.empreintes.includes(h);
+      const hs = await Promise.all(variantes(saisie).map(empreinteCourte));
+      ok = hs.some((h) => e.empreintes.includes(h));
     } catch (err) {
       $('retour').textContent = 'Vérification impossible sur cet appareil. Ouvrez la page en https.';
       $('retour').className = 'retour erreur'; verrou = false; return;

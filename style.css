@@ -136,3 +136,6 @@ body.splash-actif .entete{background:none}
 .final-reportes ul{margin:0 0 10px;padding-left:20px}
 .final-reportes .btn{width:100%}
 .bloc-libre .btn{width:100%;margin-top:6px;font-size:1.05rem}
+
+.splash-bravo{margin:0 0 6px;font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:#f1ece2;text-shadow:0 2px 10px rgba(0,0,0,.9);padding:8px 14px;border:1px solid rgba(201,150,46,.7);border-radius:999px;background:rgba(0,0,0,.35)}
+#final-photos{width:100%;margin:0 0 16px}

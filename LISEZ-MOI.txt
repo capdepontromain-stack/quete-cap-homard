@@ -18,9 +18,9 @@ Les mots de passe (dans l'ordre) :
   5. L'anagramme             CAVERNE
   6. La bouteille à la mer   ARCHITECTE
   7. Le cri de guerre        (vidéo, pas de mot)
-  8. L'Architecte (Kapla)    réponse LETCHI (litchi, lychee, lechi... acceptés)
-  9. La roue                 réponse MAFATE (mafatte, mafat acceptés)
- 10. L'archery tag           réponse FOURNAISE ou PITON DE LA FOURNAISE (fautes acceptées ; « volcan » REFUSÉ)
+  8. L'Architecte (Kapla)    montrer l'image « LAISSEZ-PASSER » au gardien ; réponse LETCHI (litchi, lychee, lechi... acceptés)
+  9. L'archery tag           le Corsaire explique les règles sur place ; réponse MAFATE (mafatte, mafat acceptés)
+     (depuis le 06/11/2026 : la roue et les seaux percés se jouent AVANT le scan du QR code ; plus d'énigme Fournaise)
      ⚠️ Les énigmes ne sont PAS affichées dans l'appli. L'ANIMATEUR les dit à l'oral une fois l'épreuve réussie.
      Aucun prénom d'animateur dans l'appli : rôles pirates. Architecte = « l'animateur » (donne les indications de construction),
      roue = « le Bosco », archery tag = « le Corsaire » (la cible). Demain : Morgane et Mika avec Romain.
@@ -30,11 +30,14 @@ Les mots de passe (dans l'ordre) :
                        et ses habitants vivent dans des îlets. Quel est ce cirque ? »
        - Archery tag : « Je crache du feu, je suis l'un des plus actifs au monde et je fais grandir
                        l'île à chaque colère. Qui suis-je ? » (réponse attendue : la Fournaise)
- 11. Le point de vue         (photo solidarité en haut de la falaise, pas de mot)
- 12. La croix                réponse PAILLE-EN-QUEUE (devinette dite sur TA MESSAGERIE, voir ci-dessous)
- 13. Le drapeau              pas de mot : bouton « Nous avons trouvé le drapeau ! » (3 drapeaux enfouis pour les 3 premiers)
+ 10. Le point de vue         (photo solidarité en haut de la falaise, pas de mot)
+ 11. La croix                table du code morse affichée dans l'appli ; réponse PAILLE-EN-QUEUE (devinette dite sur TA MESSAGERIE, voir ci-dessous)
+ 12. Le drapeau              pas de mot : bouton « Nous avons trouvé le drapeau ! » (3 drapeaux enfouis pour les 3 premiers)
 
-Les majuscules, accents, espaces et apostrophes ne comptent pas.
+Les majuscules, accents, espaces et apostrophes ne comptent pas. Une faute d'une lettre est tolérée
+(« mire d'expression » passe), ainsi qu'un article en tête (« la caverne »).
+Étape 1 : la photo d'équipage ne se débloque qu'après l'envoi du message WhatsApp « Ahoy ! L'équipage ... est prêt » :
+tu reçois donc un message par équipe dès l'inscription. Plus de bouton « Reprendre » : chaque scan du QR repart de zéro.
 Après 3 erreurs, un bouton « Demander un indice » apparaît.
 
 Pour changer un mot de passe ou un texte :
