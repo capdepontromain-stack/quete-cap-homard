@@ -7,7 +7,7 @@ window.CONFIG = {
   "final_sous_titre": "Drapeau de La Réunion trouvé",
   "whatsapp": "262693817882",
   "telephone_affiche": "06 93 81 78 82",
-  "bienvenue": "Bravo pour vos premières épreuves : la roue et les seaux percés !",
+  "bienvenue": "Bravo, aventuriers, pour la réussite de vos premières épreuves. La quête continue !",
   "final_texte": "Vous êtes arrivés au bout de la quête ! Les résultats tiendront compte du temps, mais aussi de l'ambiance et de vos photos : n'hésitez pas à renvoyer vos plus beaux clichés à l'animateur. Les résultats seront annoncés à tous les équipages. En attendant, vous pouvez être fiers de vous."
 };
 window.ETAPES = [

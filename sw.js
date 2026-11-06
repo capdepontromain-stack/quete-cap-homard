@@ -1,5 +1,5 @@
-const CACHE = 'quete-cap-homard-v37';
-const FICHIERS = ['./', 'index.html', 'style.css?v=37', 'app.js?v=37', 'etapes.js?v=37', 'img/rocher.jpg', 'img/carte.jpg', 'img/carte-croix.jpg', 'img/gouzou-jace.jpg', 'img/radeau-gericault.jpg', 'img/croix-blanche.jpg', 'img/logo-pullup.png', 'manifest.json', 'animateur.vcf'];
+const CACHE = 'quete-cap-homard-v38';
+const FICHIERS = ['./', 'index.html', 'style.css?v=38', 'app.js?v=38', 'etapes.js?v=38', 'img/rocher.jpg', 'img/carte.jpg', 'img/carte-croix.jpg', 'img/gouzou-jace.jpg', 'img/radeau-gericault.jpg', 'img/croix-blanche.jpg', 'img/logo-pullup.png', 'manifest.json', 'animateur.vcf'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FICHIERS)).then(() => self.skipWaiting()));
 });
